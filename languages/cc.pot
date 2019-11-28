@@ -1,0 +1,190 @@
+# Copyright (C) 2019 Cooperating Centers
+# This file is distributed under the same license as the Cooperating Centers package.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Cooperating Centers 0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
+"POT-Creation-Date: 2019-11-27 15:31-0200\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: centers.php:94 settings.php:8
+msgid "Cooperating Centers Settings"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: centers.php:94 centers.php:229 template/home.php:301
+msgid "Cooperating Centers"
+msgstr ""
+
+#: centers.php:143
+msgid "Cooperating Centers Area"
+msgstr ""
+
+#: centers.php:154
+msgid "Cooperating Centers Header"
+msgstr ""
+
+#: lib/Paginator.php:37 lib/Paginator.php:38 lib/Paginator.php:49
+#: lib/Paginator.php:55 lib/Paginator.php:64 lib/Paginator.php:65
+#: lib/Paginator.php:71 lib/Paginator.php:72
+msgid "go to page"
+msgstr ""
+
+#: settings.php:17
+msgid "Plugin page"
+msgstr ""
+
+#: settings.php:21
+msgid "Filter query"
+msgstr ""
+
+#: settings.php:25
+msgid "Google Analytics code"
+msgstr ""
+
+#: settings.php:38
+msgid "Home URL"
+msgstr ""
+
+#: settings.php:43 settings.php:50
+msgid "Page title"
+msgstr ""
+
+#: settings.php:59
+msgid "Page layout"
+msgstr ""
+
+#: settings.php:64
+msgid "Show filters as whole page"
+msgstr ""
+
+#: settings.php:71
+msgid "Show normal page"
+msgstr ""
+
+#: settings.php:78
+msgid "Search filters"
+msgstr ""
+
+#: settings.php:94
+msgid "Available"
+msgstr ""
+
+#: settings.php:113
+msgid "Selected"
+msgstr ""
+
+#: settings.php:133
+msgid "Save changes"
+msgstr ""
+
+#: template/home.php:72
+msgid "CoordinatingCentersRg"
+msgstr ""
+
+#: template/home.php:73
+msgid "CoordinatingCentersNc"
+msgstr ""
+
+#: template/home.php:74
+msgid "CooperatingCenters"
+msgstr ""
+
+#: template/home.php:75
+msgid "CooperatingCentersLILACS"
+msgstr ""
+
+#: template/home.php:76
+msgid "CooperatingCentersLEYES"
+msgstr ""
+
+#: template/home.php:77
+msgid "ParticipantsUnits"
+msgstr ""
+
+#: template/home.php:78
+msgid "VHLNetwork"
+msgstr ""
+
+#: template/home.php:80
+msgid "MedCarib"
+msgstr ""
+
+#: template/home.php:81
+msgid "Nursing"
+msgstr ""
+
+#: template/home.php:82
+msgid "Border"
+msgstr ""
+
+#: template/home.php:83
+msgid "Disastres"
+msgstr ""
+
+#: template/home.php:84
+msgid "Psychology"
+msgstr ""
+
+#: template/home.php:85
+msgid "MTCI"
+msgstr ""
+
+#: template/home.php:94
+msgid "Home"
+msgstr ""
+
+#: template/home.php:99
+msgid "Search result"
+msgstr ""
+
+#: template/home.php:115
+msgid "Enter one or more words"
+msgstr ""
+
+#: template/home.php:116
+msgid "Search"
+msgstr ""
+
+#: template/home.php:128
+msgid "No results found"
+msgstr ""
+
+#: template/home.php:131
+msgid "Centers"
+msgstr ""
+
+#: template/home.php:159
+msgid "Filters"
+msgstr ""
+
+#: template/home.php:169
+msgid "Selected filters"
+msgstr ""
+
+#: template-functions.php:71
+msgid "of"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/bireme/centers-wp-plugin/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "VHL Cooperating Centers Directory WordPress plugin"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "BIREME/OPAS/OMS"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://reddes.bvsalud.org/"
+msgstr ""

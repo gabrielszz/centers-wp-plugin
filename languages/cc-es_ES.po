@@ -1,0 +1,286 @@
+# Copyright (C) 2018 LeisRef
+# This file is distributed under the same license as the LeisRef package.
+msgid ""
+msgstr ""
+"Project-Id-Version: LeisRef 0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
+"POT-Creation-Date: 2019-11-27 15:31-0200\n"
+"PO-Revision-Date: 2019-11-28 17:49-0200\n"
+"Last-Translator: Vinicius de Andrade <antoniov@paho.org>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: centers.php:94 settings.php:8
+msgid "Cooperating Centers Settings"
+msgstr "Centros Cooperantes Ajustes"
+
+#. Plugin Name of the plugin/theme
+#: centers.php:94 centers.php:229 template/home.php:301
+msgid "Cooperating Centers"
+msgstr "Centros Cooperantes"
+
+#: centers.php:143
+msgid "Cooperating Centers Area"
+msgstr "Centros Cooperantes Area"
+
+#: centers.php:154
+msgid "Cooperating Centers Header"
+msgstr "Centros Cooperantes Encabezado"
+
+#: lib/Paginator.php:37 lib/Paginator.php:38 lib/Paginator.php:49
+#: lib/Paginator.php:55 lib/Paginator.php:64 lib/Paginator.php:65
+#: lib/Paginator.php:71 lib/Paginator.php:72
+msgid "go to page"
+msgstr "ir a la página"
+
+#: settings.php:17
+msgid "Plugin page"
+msgstr "Pagina del plugin"
+
+#: settings.php:21
+msgid "Filter query"
+msgstr "Filtro de búsqueda"
+
+#: settings.php:25
+msgid "Google Analytics code"
+msgstr "Código del Google Analytics"
+
+#: settings.php:38
+msgid "Home URL"
+msgstr "Enlace de la página inicial"
+
+#: settings.php:43 settings.php:50
+msgid "Page title"
+msgstr "Titulo"
+
+#: settings.php:59
+msgid "Page layout"
+msgstr "Diseño de página"
+
+#: settings.php:64
+msgid "Show filters as whole page"
+msgstr "Mostrar filtros como página completa"
+
+#: settings.php:71
+msgid "Show normal page"
+msgstr "Mostrar página normal"
+
+#: settings.php:78
+msgid "Search filters"
+msgstr "Filtros de búsqueda"
+
+#: settings.php:94
+msgid "Available"
+msgstr "Disponible"
+
+#: settings.php:113
+msgid "Selected"
+msgstr "Seleccionados"
+
+#: settings.php:133
+msgid "Save changes"
+msgstr "Guardar cambios"
+
+#: template/home.php:72
+msgid "CoordinatingCentersRg"
+msgstr "Centros Coordinadores Regionales"
+
+#: template/home.php:73
+msgid "CoordinatingCentersNc"
+msgstr "Centros Coordinadores Nacionales"
+
+#: template/home.php:74
+msgid "CooperatingCenters"
+msgstr "Centros Cooperantes"
+
+#: template/home.php:75
+msgid "CooperatingCentersLILACS"
+msgstr "Centros Cooperantes LILACS"
+
+#: template/home.php:76
+msgid "CooperatingCentersLEYES"
+msgstr "Centros Cooperantes LEYES"
+
+#: template/home.php:77
+msgid "ParticipantsUnits"
+msgstr "Unidades Participantes"
+
+#: template/home.php:78
+msgid "VHLNetwork"
+msgstr "Red BVS"
+
+#: template/home.php:80
+msgid "MedCarib"
+msgstr "MedCarib"
+
+#: template/home.php:81
+msgid "Nursing"
+msgstr "Enfermería"
+
+#: template/home.php:82
+msgid "Border"
+msgstr "Salud Fronteriza México-Estados Unidos"
+
+#: template/home.php:83
+msgid "Disastres"
+msgstr "Disastres"
+
+#: template/home.php:84
+msgid "Psychology"
+msgstr "Psicología"
+
+#: template/home.php:85
+msgid "MTCI"
+msgstr "Medicina Tradicional y Complementaria"
+
+#: template/home.php:94
+msgid "Home"
+msgstr "Inicio"
+
+#: template/home.php:99
+msgid "Search result"
+msgstr "Resultado de la búsqueda"
+
+#: template/home.php:115
+msgid "Enter one or more words"
+msgstr "Ingrese una o más palabras"
+
+#: template/home.php:116
+msgid "Search"
+msgstr "Buscar"
+
+#: template/home.php:128
+msgid "No results found"
+msgstr "No se han encontrado resultados"
+
+#: template/home.php:131
+msgid "Centers"
+msgstr "Centros"
+
+#: template/home.php:159
+msgid "Filters"
+msgstr "Filtros"
+
+#: template/home.php:169
+msgid "Selected filters"
+msgstr "Filtros seleccionados"
+
+#: template-functions.php:71
+msgid "of"
+msgstr "de"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/bireme/centers-wp-plugin/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "VHL Cooperating Centers Directory WordPress plugin"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "BIREME/OPAS/OMS"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://reddes.bvsalud.org/"
+msgstr ""
+
+#~ msgid "Legislation Settings"
+#~ msgstr "Ajustes Legislación"
+
+#~ msgid "Legislation"
+#~ msgstr "Legislación"
+
+#~ msgid "Legislation sidebar"
+#~ msgstr "Legislación sidebar"
+
+#~ msgid "Legislation header"
+#~ msgstr "Legislación sidebar superior"
+
+#~ msgid "Legislation settings"
+#~ msgstr "Legislación ajustes"
+
+#~ msgid "Fulltext"
+#~ msgstr "Texto completo"
+
+#~ msgid "Present alternative fulltext links"
+#~ msgstr "Presentar enlaces alternativos de texto completo"
+
+#~ msgid "Portuguese"
+#~ msgstr "Português"
+
+#~ msgid "Spanish"
+#~ msgstr "Español"
+
+#~ msgid "English"
+#~ msgstr "Inglês"
+
+#~ msgid "Act"
+#~ msgstr "Ato"
+
+#~ msgid "Share"
+#~ msgstr "Compartir"
+
+#~ msgid "Related articles"
+#~ msgstr "Artículos relacionados"
+
+#~ msgid "Normative Acts"
+#~ msgstr "Actos Normativos"
+
+#~ msgid "Act country/region"
+#~ msgstr "País/región del acto"
+
+#~ msgid "Organ issuer"
+#~ msgstr "Órgano Emisor"
+
+#~ msgid "Act scope"
+#~ msgstr "Esfera del acto"
+
+#~ msgid "Source"
+#~ msgstr "Fuente"
+
+#~ msgid "Language"
+#~ msgstr "Idioma"
+
+#~ msgid "Collection"
+#~ msgstr "Colección"
+
+#~ msgid "Text in"
+#~ msgstr "Texto en"
+
+#~ msgid "Read more"
+#~ msgstr "Vea mas"
+
+#~ msgid "Display filters"
+#~ msgstr "Mostrar filtros"
+
+#~ msgid "Subject"
+#~ msgstr "Asunto"
+
+#~ msgid "Act type"
+#~ msgstr "Tipo del acto"
+
+#~ msgid "Country/region"
+#~ msgstr "País/región"
+
+#~ msgid "Database"
+#~ msgstr "Base de datos"
+
+#~ msgid "Year"
+#~ msgstr "Año"
+
+#~ msgid "Total"
+#~ msgstr "Total"
+
+#~ msgid "Legislation Directory"
+#~ msgstr "Directorio de legislación"
+
+#~ msgid "Ementa"
+#~ msgstr "Ementa"
+
+#~ msgid "Legislation found"
+#~ msgstr "Legislación encontrada"
