@@ -29,7 +29,7 @@ if(!class_exists('CC_Plugin')) {
     class CC_Plugin {
 
         private $plugin_slug = 'centers';
-        private $service_url = 'http://fi-admin.teste.bvsalud.org/';
+        private $service_url = 'http://fi-admin.data.bvsalud.org/';
 
         /**
          * Construct the plugin object
