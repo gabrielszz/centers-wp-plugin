@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LeisRef 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2019-11-27 17:26:06+00:00\n"
-"PO-Revision-Date: 2019-11-27 15:30-0200\n"
+"POT-Creation-Date: 2019-12-03 19:23:31+00:00\n"
+"PO-Revision-Date: 2019-12-03 17:23-0200\n"
 "Last-Translator: Vinicius de Andrade <antoniov@paho.org>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgid "Cooperating Centers Settings"
 msgstr "Centros Cooperantes Ajustes"
 
 #. Plugin Name of the plugin/theme
-#: centers.php:94 centers.php:229 template/home.php:301
+#: centers.php:94 centers.php:229
 msgid "Cooperating Centers"
 msgstr "Centros Cooperantes"
 
@@ -85,87 +85,87 @@ msgstr "Selecionados"
 msgid "Save changes"
 msgstr "Salvar mudanças"
 
-#: template/home.php:72
+#: template/home.php:71
 msgid "CoordinatingCentersRg"
 msgstr "Centros Coordenadores Regionais"
 
-#: template/home.php:73
+#: template/home.php:72
 msgid "CoordinatingCentersNc"
 msgstr "Centros Coordenadores Nacionais"
 
-#: template/home.php:74
+#: template/home.php:73
 msgid "CooperatingCenters"
 msgstr "Centros Cooperantes"
 
-#: template/home.php:75
+#: template/home.php:74
 msgid "CooperatingCentersLILACS"
 msgstr "Centros Cooperantes LILACS"
 
-#: template/home.php:76
+#: template/home.php:75
 msgid "CooperatingCentersLEYES"
 msgstr "Centros Cooperantes LEYES"
 
-#: template/home.php:77
+#: template/home.php:76
 msgid "ParticipantsUnits"
 msgstr "Unidades Participantes"
 
-#: template/home.php:78
+#: template/home.php:77
 msgid "VHLNetwork"
 msgstr "Rede BVS"
 
-#: template/home.php:80
+#: template/home.php:79
 msgid "MedCarib"
 msgstr "MedCarib"
 
-#: template/home.php:81
+#: template/home.php:80
 msgid "Nursing"
 msgstr "Enfermagem"
 
-#: template/home.php:82
+#: template/home.php:81
 msgid "Border"
 msgstr "Saúde Frontera México-Estados Unidos"
 
-#: template/home.php:83
+#: template/home.php:82
 msgid "Disastres"
 msgstr "Desastres"
 
-#: template/home.php:84
+#: template/home.php:83
 msgid "Psychology"
 msgstr "Psicologia"
 
-#: template/home.php:85
+#: template/home.php:84
 msgid "MTCI"
 msgstr "Medicina Tradicional e Complementar"
 
-#: template/home.php:94
+#: template/home.php:93
 msgid "Home"
 msgstr "Início"
 
-#: template/home.php:99
+#: template/home.php:98
 msgid "Search result"
 msgstr "Resultado da pesquisa"
 
-#: template/home.php:115
+#: template/home.php:114
 msgid "Enter one or more words"
 msgstr "Entre uma ou mais palavras"
 
-#: template/home.php:116
+#: template/home.php:115
 msgid "Search"
 msgstr "Pesquisa"
 
-#: template/home.php:128
+#: template/home.php:124
 msgid "No results found"
 msgstr "Nenhum resultado encontrado"
 
-#: template/home.php:131
-msgid "Centers"
-msgstr "Centros"
+#: template/home.php:127 template/home.php:301
+msgid "Institutions"
+msgstr "Instituições"
 
-#: template/home.php:159
+#: template/home.php:155
 msgid "Filters"
 msgstr "Filtros"
 
-#: template/home.php:169
+#: template/home.php:165
 msgid "Selected filters"
 msgstr "Selecione os filtros"
 
@@ -188,6 +188,9 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://reddes.bvsalud.org/"
 msgstr ""
+
+#~ msgid "Centers"
+#~ msgstr "Centros"
 
 #~ msgid "cooperatingCenters"
 #~ msgstr "Centros Cooperantes"

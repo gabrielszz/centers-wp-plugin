@@ -1,25 +1,24 @@
 # Copyright (C) 2019 Cooperating Centers
 # This file is distributed under the same license as the Cooperating Centers package.
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Cooperating Centers 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2019-11-27 15:31-0200\n"
+"POT-Creation-Date: 2019-12-03 19:23:31+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: Poedit 2.0.6\n"
 
 #: centers.php:94 settings.php:8
 msgid "Cooperating Centers Settings"
 msgstr ""
 
+#. #-#-#-#-#  centers.pot (Cooperating Centers 0.1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: centers.php:94 centers.php:229 template/home.php:301
+#: centers.php:94 centers.php:229
 msgid "Cooperating Centers"
 msgstr ""
 
@@ -85,87 +84,87 @@ msgstr ""
 msgid "Save changes"
 msgstr ""
 
-#: template/home.php:72
+#: template/home.php:71
 msgid "CoordinatingCentersRg"
 msgstr ""
 
-#: template/home.php:73
+#: template/home.php:72
 msgid "CoordinatingCentersNc"
 msgstr ""
 
-#: template/home.php:74
+#: template/home.php:73
 msgid "CooperatingCenters"
 msgstr ""
 
-#: template/home.php:75
+#: template/home.php:74
 msgid "CooperatingCentersLILACS"
 msgstr ""
 
-#: template/home.php:76
+#: template/home.php:75
 msgid "CooperatingCentersLEYES"
 msgstr ""
 
-#: template/home.php:77
+#: template/home.php:76
 msgid "ParticipantsUnits"
 msgstr ""
 
-#: template/home.php:78
+#: template/home.php:77
 msgid "VHLNetwork"
 msgstr ""
 
-#: template/home.php:80
+#: template/home.php:79
 msgid "MedCarib"
 msgstr ""
 
-#: template/home.php:81
+#: template/home.php:80
 msgid "Nursing"
 msgstr ""
 
-#: template/home.php:82
+#: template/home.php:81
 msgid "Border"
 msgstr ""
 
-#: template/home.php:83
+#: template/home.php:82
 msgid "Disastres"
 msgstr ""
 
-#: template/home.php:84
+#: template/home.php:83
 msgid "Psychology"
 msgstr ""
 
-#: template/home.php:85
+#: template/home.php:84
 msgid "MTCI"
 msgstr ""
 
-#: template/home.php:94
+#: template/home.php:93
 msgid "Home"
 msgstr ""
 
-#: template/home.php:99
+#: template/home.php:98
 msgid "Search result"
 msgstr ""
 
-#: template/home.php:115
+#: template/home.php:114
 msgid "Enter one or more words"
 msgstr ""
 
-#: template/home.php:116
+#: template/home.php:115
 msgid "Search"
 msgstr ""
 
-#: template/home.php:128
+#: template/home.php:124
 msgid "No results found"
 msgstr ""
 
-#: template/home.php:131
-msgid "Centers"
+#: template/home.php:127 template/home.php:301
+msgid "Institutions"
 msgstr ""
 
-#: template/home.php:159
+#: template/home.php:155
 msgid "Filters"
 msgstr ""
 
-#: template/home.php:169
+#: template/home.php:165
 msgid "Selected filters"
 msgstr ""
 

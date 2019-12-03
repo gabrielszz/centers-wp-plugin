@@ -15,7 +15,7 @@ function cc_page_admin() {
                     <tbody>
                         <tr valign="top">
                             <th scope="row"><?php _e('Plugin page', 'cc'); ?>:</th>
-                            <td><input type="text" name="cc_config[plugin_slug]" value="<?php echo ($config['plugin_slug'] != '' ? $config['plugin_slug'] : 'cc'); ?>" class="regular-text code"></td>
+                            <td><input type="text" name="cc_config[plugin_slug]" value="<?php echo ($config['plugin_slug'] != '' ? $config['plugin_slug'] : 'centers'); ?>" class="regular-text code"></td>
                         </tr>
                         <tr valign="top">
                             <th scope="row"><?php _e('Filter query', 'cc'); ?>:</th>

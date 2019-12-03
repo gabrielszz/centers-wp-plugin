@@ -124,7 +124,7 @@ $thematic_translated['MTCI'] = __('MTCI','cc');
                         <h1 class="h1-header"><?php _e('No results found','cc'); ?></h1>
                     <?php else :?>
         				<header class="row-fluid border-bottom">
-    					   <h1 class="h1-header"> <?php echo $total; ?> <?php _e('Centers','cc'); ?></h1>
+    					   <h1 class="h1-header"> <?php echo $total; ?> <?php _e('Institutions','cc'); ?></h1>
         				</header>
         				<div class="row-fluid">
                             <?php foreach ( $legislation_list as $resource) { ?>
@@ -298,7 +298,7 @@ $thematic_translated['MTCI'] = __('MTCI','cc');
 <div class="content-area result-list">
   <section >
     <header class="row-fluid">
-     <h1 class="h1-header"> <?php echo $total; ?> <?php _e('Cooperating Centers','cc'); ?></h1>
+     <h1 class="h1-header"> <?php echo $total; ?> <?php _e('Institutions','cc'); ?></h1>
      </header>
   </section>
 		</div> <!-- close DIV.ajusta2 -->
