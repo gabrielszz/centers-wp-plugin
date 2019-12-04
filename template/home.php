@@ -237,7 +237,7 @@ $thematic_translated['MTCI'] = __('MTCI','cc');
                                 </section>
                             <?php endif; ?>
 
-                            <?php if ($content == 'Thematic' ): ?>
+                            <?php if ($content == 'Thematic' && $thematic_list ): ?>
                 			    <section class="row-fluid marginbottom25 widget_categories">
                 					<header class="row-fluid border-bottom marginbottom15">
                 						<h1 class="h1-header"><?php echo translate_label($cc_texts, 'institution_thematic', 'filter') ?></h1>

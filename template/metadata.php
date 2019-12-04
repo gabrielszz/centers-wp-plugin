@@ -5,20 +5,29 @@
 
 <div class="row-fluid">
     <h2 class="h2-loop-tit">
-        <?php echo $resource->title ?>
+        <?php
+        echo $resource->title . '<br/>';
+        if ($resource->unit){
+            foreach ( $resource->unit as $unit ){
+                echo $unit . '<br/>';
+            }
+        }
+        ?>
     </h2>
 </div>
 
-<?php if ($resource->unit): ?>
-    <div class="row-fluid">
-        <?php foreach ( $resource->unit as $unit ):
-            echo $unit . '<br/>';
-         endforeach; ?>
-    </div>
-<?php endif; ?>
-
 <div class="row-fluid marginbottom15" >
-    <?php echo $resource->cooperative_center_code; ?>
+    <?php
+        echo $resource->cooperative_center_code . '<br/>';
+        if ($resource->institution_type){
+            $exclude_common_types = array('CooperatingCenters', 'ParticipantsUnits', 'VHLNetwork');
+            foreach ( $resource->institution_type as $type ){
+                if ( !in_array($type, $exclude_common_types) ){
+                    echo $type_translated[$type] . '<br/>';
+                }
+            }
+        }
+    ?>
 </div>
 
 <?php if ($resource->address): ?>

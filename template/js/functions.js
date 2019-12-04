@@ -1,4 +1,4 @@
-var $j = jQuery;
+var $j = jQuery.noConflict();
 
 $j(window).load(function(){
 	//showTips();
@@ -63,17 +63,17 @@ function show_more_list(){
 
 function remove_filter(id) {
     // remove hidden field
-    $("#"+id).remove();
+    $j("#"+id).remove();
     var filter = '';
 
-    $('.apply_filter').each(function(i){
+    $j('.apply_filter').each(function(i){
         filter += this.value + ' AND ';
     });
     // remove last AND of string
     filter = filter.replace(/\sAND\s$/, "");
 
-    $('#filter').val(filter);
-    $("#formFilters").submit();
+    $j('#filter').val(filter);
+    $j("#formFilters").submit();
 }
 
 function show_similar(url){
