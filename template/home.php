@@ -97,26 +97,28 @@ $thematic_translated['MTCI'] = __('MTCI','cc');
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=bs'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/bahamas.jpg" alt="" class="img-fluid">
                             <h4>Bahamas</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=bz'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/belize.jpg" alt="" class="img-fluid">
                             <h4>Belize</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=bo'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/bolivia.jpg" alt="" class="img-fluid">
                             <h4>Bolívia</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/brasil.jpg" alt="" class="img-fluid">
-                        <h4>Brasil</h4>
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=br'?>">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/brasil.jpg" alt="" class="img-fluid">
+                            <h4>Brasil</h4>
+                        </a>
                         <!--
                         <select name="" id="" class="form-control">
                             <option value="" selected disabled="">Selecione</option>
@@ -181,127 +183,127 @@ $thematic_translated['MTCI'] = __('MTCI','cc');
                         </select>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=cl'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/chile.jpg" alt="" class="img-fluid">
                             <h4>Chile</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=co'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/colombia.jpg" alt="" class="img-fluid">
                             <h4>Colômbia</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=cr'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/costa_rica.jpg" alt="" class="img-fluid">
                             <h4>Costa Rica</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=cu'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/cuba.jpg" alt="" class="img-fluid">
                             <h4>Cuba</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=sv'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/el_salvador.jpg" alt="" class="img-fluid">
                             <h4>El Salvador</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=ec'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/equador.jpg" alt="" class="img-fluid">
                             <h4>Equador</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=gt'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/guatemala.jpg" alt="" class="img-fluid">
                             <h4>Guatemala</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=gf'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/guiana.jpg" alt="" class="img-fluid">
                             <h4>Guiana</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=gf'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/francesa.jpg" alt="" class="img-fluid">
                             <h4>Guiana Francesa</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=ht'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/haiti.jpg" alt="" class="img-fluid">
                             <h4>Haiti</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=hn'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/honduras.jpg" alt="" class="img-fluid">
                             <h4>Honduras</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=jm'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/jamaica.jpg" alt="" class="img-fluid">
                             <h4>Jamaica</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=mx'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/mexico.jpg" alt="" class="img-fluid">
                             <h4>México</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=ni'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/nicaragua.jpg" alt="" class="img-fluid">
                             <h4>Nicarágua</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=pa'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/panama.jpg" alt="" class="img-fluid">
                             <h4>Panamá</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=py'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/paraguai.jpg" alt="" class="img-fluid">
                             <h4>Paraguai</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=pe'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/peru.jpg" alt="" class="img-fluid">
                             <h4>Peru</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=pr'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/porto_rico.jpg" alt="" class="img-fluid">
                             <h4>Porto Rico</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=do'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/republica_dominicana.jpg" alt="" class="img-fluid">
                             <h4>Rep. Dominicana</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=sr'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/suriname.jpg" alt="" class="img-fluid">
                             <h4>Suriname</h4>
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=tt'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/trinidad.jpg" alt="" class="img-fluid">
                             <h4>Trinidad e Tobago</h4>
                         </a>
@@ -313,7 +315,7 @@ $thematic_translated['MTCI'] = __('MTCI','cc');
                         </a>
                     </div>
                     <div class="col-6 col-lg-4 col-xl-3 country">
-                        <a href="">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=ve'?>">
                             <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/venezuela.jpg" alt="" class="img-fluid">
                             <h4>Venezuela</h4>
                         </a>

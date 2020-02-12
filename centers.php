@@ -245,10 +245,6 @@ if(!class_exists('CC_Plugin')) {
             return $links;
         }
 
-		<?php
-		    } //endif
-		}
-
         function startsWith ($string, $startString) {
             $len = strlen($startString);
             return (substr($string, 0, $len) === $startString);
