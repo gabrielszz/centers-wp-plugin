@@ -2,7 +2,7 @@
 /*
 Template Name: CC Home
 */
-global $cc_service_url, $cc_plugin_slug, $cc_plugin_title, $cc_texts;
+global $cc_service_url, $cc_plugin_slug, $cc_plugin_title;
 
 require_once(CC_PLUGIN_PATH . '/lib/Paginator.php');
 
@@ -59,7 +59,6 @@ if ($response){
 }
 
 $page_url_params = real_site_url($cc_plugin_slug) . '?q=' . urlencode($query)  . '&filter=' . urlencode($filter);
-$feed_url = real_site_url($cc_plugin_slug) . 'cc-feed?q=' . urlencode($query) . '&filter=' . urlencode($user_filter);
 
 $pages = new Paginator($total, $start, $count);
 $pages->paginate($page_url_params);
@@ -85,335 +84,289 @@ $thematic_translated['MTCI'] = __('MTCI','cc');
 
 ?>
 
-<?php get_header('cc');?>
+<?php include('header.php') ?>
 
-    <div id="content" class="row-fluid">
-	  <div class="ajusta2">
-          <div class="row-fluid breadcrumb">
-              <a href="<?php echo $home_url ?>"><?php _e('Home','cc'); ?></a> >
-              <?php if ($query == '' && $filter == ''): ?>
-                  <?php echo $plugin_breadcrumb ?>
-              <?php else: ?>
-                  <a href="<?php echo real_site_url($cc_plugin_slug); ?>"><?php echo $plugin_breadcrumb ?> </a> >
-                  <?php _e('Search result', 'cc') ?>
-              <?php endif; ?>
-          </div>
-          <!-- Start sidebar cc-header -->
-          <div class="row-fluid">
-              <?php dynamic_sidebar('cc-header');?>
-          </div>
-          <div class="spacer"></div>
-          <!-- end sidebar cc-header -->
-            <section class="header-search">
-                <form role="search" method="get" name="searchForm" id="searchForm" action="<?php echo real_site_url($cc_plugin_slug); ?>">
-                    <input type="hidden" name="lang" id="lang" value="<?php echo $lang; ?>">
-                    <input type="hidden" name="sort" id="sort" value="<?php echo $_GET['sort']; ?>">
-                    <input type="hidden" name="format" id="format" value="<?php echo $format ? $format : 'summary'; ?>">
-                    <input type="hidden" name="count" id="count" value="<?php echo $count; ?>">
-                    <input type="hidden" name="page" id="page" value="<?php echo $page; ?>">
-                    <input value='<?php echo $query; ?>' name="q" class="input-search" id="s" type="text" placeholder="<?php _e('Enter one or more words', 'cc'); ?>">
-                    <input id="searchsubmit" value="<?php _e('Search', 'cc'); ?>" type="submit">
-                </form>
-            </section>
-
-<?php if ($cc_config['page_layout'] != 'whole_page' || $_GET['q'] != '' || $_GET['filter'] != '' ) :  // test for page layout,  query search and Filters ?>
-
-            <div class="content-area result-list">
-    			<section id="conteudo">
-                    <?php if ( isset($total) && strval($total) == 0) :?>
-                        <h1 class="h1-header"><?php _e('No results found','cc'); ?></h1>
-                    <?php else :?>
-        				<header class="row-fluid border-bottom">
-    					   <h1 class="h1-header"> <?php echo $total; ?> <?php _e('Institutions','cc'); ?></h1>
-        				</header>
-        				<div class="row-fluid">
-                            <?php foreach ( $legislation_list as $resource) { ?>
-        					    <article class="conteudo-loop">
-                                    <?php include('metadata.php') ?>
-            					</article>
-                            <?php } ?>
-        				</div>
-                        <div class="row-fluid">
-                            <?php echo $pages->display_pages(); ?>
-                        </div>
-                    <?php endif; ?>
-    			</section>
-    			<aside id="sidebar">
-
-                    <?php dynamic_sidebar('cc-home');?>
-
-                    <?php if (strval($total) > 0) :?>
-                        <div id="filter-link" style="display: none">
-                            <div class="mobile-menu" onclick="animateMenu(this)">
-                                <a href="javascript:showHideFilters()">
-                                    <div class="menu-bar">
-                                        <div class="bar1"></div>
-                                        <div class="bar2"></div>
-                                        <div class="bar3"></div>
-                                    </div>
-                                    <div class="menu-item">
-                                        <?php _e('Filters','cc') ?>
-                                    </div>
-                                </a>
-                           </div>
-                        </div>
-
-                        <div id="filters">
-                            <?php if ($applied_filter_list) :?>
-                                <section class="row-fluid widget_categories">
-                                    <header class="row-fluid marginbottom15">
-                                        <h1 class="h1-header"><?php echo _e('Selected filters', 'cc') ?></h1>
-                                    </header>
-                                    <form method="get" name="searchFilter" id="formFilters" action="<?php echo real_site_url($cc_plugin_slug); ?>">
-                                        <input type="hidden" name="lang" id="lang" value="<?php echo $lang; ?>">
-                                        <input type="hidden" name="sort" id="sort" value="<?php echo $sort; ?>">
-                                        <input type="hidden" name="format" id="format" value="<?php echo $format; ?>">
-                                        <input type="hidden" name="count" id="count" value="<?php echo $count; ?>">
-                                        <input type="hidden" name="q" id="query" value="<?php echo $query; ?>" >
-                                        <input type="hidden" name="filter" id="filter" value="" >
-
-                                        <?php foreach ( $applied_filter_list as $filter => $filter_values ) :?>
-                                            <h2><?php echo translate_label($cc_texts, $filter, 'filter') ?></h2>
-                                            <ul>
-                                            <?php foreach ( $filter_values as $value ) :?>
-                                                <input type="hidden" name="apply_filter" class="apply_filter"
-                                                        id="<?php echo md5($value) ?>" value='<?php echo $filter . ':"' . $value . '"'; ?>' >
-                                                <li>
-                                                    <span class="filter-item">
-                                                        <?php
-                                                            if ($filter == 'country'){
-                                                                echo print_lang_value($value, $site_language);
-                                                            }elseif ($filter == 'institution_type'){
-                                                                echo $type_translated[$value];
-                                                            }elseif ($filter == 'institution_thematic'){
-                                                                echo $thematic_translated[$value];
-                                                            }else{
-                                                                echo $value;
-                                                            }
-                                                        ?>
-                                                    </span>
-                                                    <span class="filter-item-del">
-                                                        <a href="javascript:remove_filter('<?php echo md5($value) ?>')">
-                                                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/del.png">
-                                                        </a>
-                                                    </span>
-                                                </li>
-                                            <?php endforeach; ?>
-                                            </ul>
-                                        <?php endforeach; ?>
-                                    </form>
-                                </section>
-                            <?php endif; ?>
-
-                            <?php
-                              $order = explode(';', $cc_config['available_filter']);
-                              foreach($order as $index=>$content) {
-                                $content = trim($content);
-                            ?>
-
-                            <?php if ($content == 'Type') :  ?>
-                                <section class="row-fluid widget_categories">
-                                    <header class="row-fluid border-bottom marginbottom15">
-                                        <h1 class="h1-header"><?php echo translate_label($cc_texts, 'institution_type', 'filter'); ?></h1>
-                                    </header>
-                                    <ul>
-                                        <?php foreach ( $type_list as $type ) { ?>
-                                            <li class="cat-item">
-                                                <?php
-                                                    $filter_link = '?';
-                                                    if ($query != ''){
-                                                        $filter_link .= 'q=' . $query . '&';
-                                                    }
-                                                    $filter_link .= 'filter=institution_type:"' . $type[0] . '"';
-                                                    if ($user_filter != ''){
-                                                        $filter_link .= ' AND ' . $user_filter ;
-                                                    }
-                                                ?>
-                                                <a href='<?php echo $filter_link; ?>'><?php echo $type_translated[$type[0]]; ?></a>
-                                                <span class="cat-item-count"><?php echo $type[1]; ?></span>
-                                            </li>
-                                        <?php } ?>
-                                    </ul>
-                                </section>
-                            <?php endif; ?>
-
-                            <?php if ($content == 'Thematic' && $thematic_list ): ?>
-                			    <section class="row-fluid marginbottom25 widget_categories">
-                					<header class="row-fluid border-bottom marginbottom15">
-                						<h1 class="h1-header"><?php echo translate_label($cc_texts, 'institution_thematic', 'filter') ?></h1>
-                					</header>
-                					<ul>
-                                        <?php foreach ( $thematic_list as $thematic) { ?>
-                                            <?php
-                                                $filter_link = '?';
-                                                if ($query != ''){
-                                                    $filter_link .= 'q=' . $query . '&';
-                                                }
-                                                $filter_link .= 'filter=institution_thematic:"' . $thematic[0] . '"';
-                                                if ($user_filter != ''){
-                                                    $filter_link .= ' AND ' . $user_filter ;
-                                                }
-                                            ?>
-                                            <li class="cat-item">
-                                                <a href='<?php echo $filter_link; ?>'><?php echo $thematic_translated[$thematic[0]] ?></a>
-                                                <span class="cat-item-count"><?php echo $thematic[1] ?></span>
-                                            </li>
-                                        <?php } ?>
-                					</ul>
-                				</section>
-                            <?php endif; ?>
-
-                            <?php if ( $content == 'Country' ): ?>
-                                <section class="row-fluid marginbottom25 widget_categories">
-                                    <header class="row-fluid border-bottom marginbottom15">
-                                        <h1 class="h1-header"><?php echo translate_label($cc_texts, 'country', 'filter') ?></h1>
-                                    </header>
-                                    <ul>
-                                        <?php foreach ( $country_list as $country ) { ?>
-                                            <?php
-                                                $filter_link = '?';
-                                                if ($query != ''){
-                                                    $filter_link .= 'q=' . $query . '&';
-                                                }
-                                                $filter_link .= 'filter=country:"' . $country[0] . '"';
-                                                if ($user_filter != ''){
-                                                    $filter_link .= ' AND ' . $user_filter ;
-                                                }
-                                            ?>
-                                            <li class="cat-item">
-                                                <a href='<?php echo $filter_link; ?>'><?php print_lang_value($country[0], $site_language)?></a>
-                                                <span class="cat-item-count"><?php echo $country[1] ?></span>
-                                            </li>
-                                        <?php } ?>
-                                    </ul>
-                                </section>
-                            <?php endif; ?>
-                        <?php } ?>
-                    <?php endif; ?>
-                </aside>
-    			<div class="spacer"></div>
-            </div> <!-- close DIV.result-area -->
-<?php else: // start whole page ?>
-
-<div class="content-area result-list">
-  <section >
-    <header class="row-fluid">
-     <h1 class="h1-header"> <?php echo $total; ?> <?php _e('Institutions','cc'); ?></h1>
-     </header>
-  </section>
-		</div> <!-- close DIV.ajusta2 -->
-<?php
-$order = explode(';', $cc_config['available_filter']);
-
-  foreach($order as $index=>$content) {
-    $content = trim($content);
-?>
-
-
-  <?php if ($content == 'Type') : ?>
-      <section>
-        <header class="row-fluid border-bottom">
-           <h1 class="h1-header"><?php echo translate_label($cc_texts, 'institution_type', 'filter'); ?></h1>
-        </header>
-          <ul class="col3">
-              <?php foreach ( $type_list as $type ) { ?>
-                  <li class="cat-item">
-                      <?php
-                          $filter_link = '?';
-                          if ($query != ''){
-                              $filter_link .= 'q=' . $query . '&';
-                          }
-                          $filter_link .= 'filter=institution_type:"' . $type[0] . '"';
-                          if ($user_filter != ''){
-                              $filter_link .= ' AND ' . $user_filter ;
-                          }
-                      ?>
-                      <div class="list_bloco">
-                        <div class="list_link">
-                          <a href='<?php echo $filter_link; ?>'><?php echo $type_translated[$type[0]]; ?></a>
-                        </div>
-                        <div class="list_badge">
-                            <span><?php echo $type[1]; ?></span>
-                        </div>
-                      </div>
-                  </li>
-              <?php } ?>
-          </ul>
-      </section>
-  <?php endif; ?>
-<?php if ($content == 'Thematic' ): ?>
-  <section>
-    <header class="row-fluid border-bottom">
-      <h1 class="h1-header"><?php echo translate_label($cc_texts, 'institution_thematic', 'filter') ?></h1>
-    </header>
-    <ul class="col3">
-    <?php foreach ( $thematic_list as $thematic ) { ?>
-    <?php
-      $filter_link = '?';
-      if ($query != ''){
-        $filter_link .= 'q=' . $query . '&';
-      }
-      $filter_link .= 'filter=institution_thematic:"' . $thematic[0] . '"';
-      if ($user_filter != ''){
-        $filter_link .= ' AND ' . $user_filter ;
-      }
-      ?>
-        <li>
-        <div class="list_bloco">
-          <div class="list_link">
-            <a href='<?php echo $filter_link; ?>'><?php echo $thematic_translated[$thematic[0]]; ?></a>
-          </div>
-          <div class="list_badge">
-            <span><?php echo $thematic[1] ?></span>
-          </div>
-        </div>
-      </li>
-<?php } ?>
-    </ul>
-  </section>
-<?php endif; ?>
-
-<?php if( $content == 'Country' ): ?>
-    <section >
-        <header class="row-fluid border-bottom ">
-            <h1 class="h1-header"><?php echo translate_label($cc_texts, 'country', 'filter') ?></h1>
-        </header>
-        <ul class="col3">
-            <?php foreach ( $country_list as $country ) { ?>
-                <?php
-                    $filter_link = '?';
-                    if ($query != ''){
-                        $filter_link .= 'q=' . $query . '&';
-                    }
-                    $filter_link .= 'filter=country:"' . $country[0] . '"';
-                    if ($user_filter != ''){
-                        $filter_link .= ' AND ' . $user_filter ;
-                    }
-                ?>
-                <li>
-                    <div class="list_bloco">
-                      <div class="list_link">
-                        <a href='<?php echo $filter_link; ?>'><?php print_lang_value($country[0], $site_language)?></a>
-
-                      </div>
-                      <div class="list_badge">
-                        <span><?php echo $country[1] ?></span>
-
-                      </div>
+<section class="container" id="main_container">
+		<div class="row">
+			<div class="col-12 col-md-8 col-lg-9">
+				<div class="row">
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="<?php echo real_site_url($cc_plugin_slug) . 'search?lang=' . $lang . '&country_code=ar'?>">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/argentina.jpg" alt="" class="img-fluid">
+                            <h4>Argentina</h4>
+                        </a>
                     </div>
-                </li>
-            <?php } ?>
-        </ul>
-    </section>
-<?php endif; ?>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/bahamas.jpg" alt="" class="img-fluid">
+                            <h4>Bahamas</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/belize.jpg" alt="" class="img-fluid">
+                            <h4>Belize</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/bolivia.jpg" alt="" class="img-fluid">
+                            <h4>Bolívia</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/brasil.jpg" alt="" class="img-fluid">
+                        <h4>Brasil</h4>
+                        <!--
+                        <select name="" id="" class="form-control">
+                            <option value="" selected disabled="">Selecione</option>
+                            <option value="" disabled><b> -- Norte -- </b></option>
+                            <option value="">Acre</option>
+                            <option value="">Amapá</option>
+                            <option value="">Amazônia</option>
+                            <option value="">Pará</option>
+                            <option value="">Rondônia</option>
+                            <option value="">Roraima</option>
+                            <option value="">Tocantins</option>
 
-<?php } ?>
 
-</div>
-<div class="spacer"></div>
+                            <option value="" disabled><b> -- Nortedeste -- </b></option>
+                            <option value="">Maranhão</option>
+                            <option value="">Piauí</option>
+                            <option value="">Ceará</option>
+                            <option value="">Rio Grande do Norte</option>
+                            <option value="">Paraíba</option>
+                            <option value="">Pernambuco</option>
+                            <option value="">Alagoas</option>
+                            <option value="">Sergipe</option>
+                            <option value="">Bahia</option>
 
-<?php endif; // end whole page?>
 
 
-	</div>
-<?php get_footer();?>
+                            <option value="" disabled><b> -- Centro Oeste -- </b></option>
+                            <option value="">Mato Grosso</option>
+                            <option value="">Goiás</option>
+                            <option value="">Mato Grosso do Sul</option>
+                            <option value="">DF</option>
+
+
+                            <option value="" disabled><b> -- Sudeste -- </b></option>
+                            <option value="">Paraná</option>
+                            <option value="">Santa Catarina</option>
+                            <option value="">Rio Grande do Sul</option>
+
+
+                            <option value="" disabled><b> -- Sul -- </b></option>
+                            <option value="">Minas Gerais</option>
+                            <option value="">Espírito Santo</option>
+                            <option value="">Rio de Janeiro</option>
+                            <option value="">São Paulo</option>
+                        </select>
+                        -->
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/caribe.jpg" alt="" class="img-fluid">
+                        <h4>Caribe</h4>
+                        <select name="" id="" class="form-control">
+                            <option value="" disabled selected>Seleciona</option>
+                            <option value="">Ilhas Virgens Britanicas</option>
+                            <option value="">Sao Cristovao e Nevis</option>
+                            <option value="">Sao Vicete e Granadinas</option>
+                            <option value="">Granada</option>
+                            <option value="">Dominica</option>
+                            <option value="">Santa Lucia</option>
+                            <option value="">Barbados</option>
+                            <option value="">Antigua</option>
+                            <option value="">Anguila</option>
+                        </select>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/chile.jpg" alt="" class="img-fluid">
+                            <h4>Chile</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/colombia.jpg" alt="" class="img-fluid">
+                            <h4>Colômbia</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/costa_rica.jpg" alt="" class="img-fluid">
+                            <h4>Costa Rica</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/cuba.jpg" alt="" class="img-fluid">
+                            <h4>Cuba</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/el_salvador.jpg" alt="" class="img-fluid">
+                            <h4>El Salvador</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/equador.jpg" alt="" class="img-fluid">
+                            <h4>Equador</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/guatemala.jpg" alt="" class="img-fluid">
+                            <h4>Guatemala</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/guiana.jpg" alt="" class="img-fluid">
+                            <h4>Guiana</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/francesa.jpg" alt="" class="img-fluid">
+                            <h4>Guiana Francesa</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/haiti.jpg" alt="" class="img-fluid">
+                            <h4>Haiti</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/honduras.jpg" alt="" class="img-fluid">
+                            <h4>Honduras</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/jamaica.jpg" alt="" class="img-fluid">
+                            <h4>Jamaica</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/mexico.jpg" alt="" class="img-fluid">
+                            <h4>México</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/nicaragua.jpg" alt="" class="img-fluid">
+                            <h4>Nicarágua</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/panama.jpg" alt="" class="img-fluid">
+                            <h4>Panamá</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/paraguai.jpg" alt="" class="img-fluid">
+                            <h4>Paraguai</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/peru.jpg" alt="" class="img-fluid">
+                            <h4>Peru</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/porto_rico.jpg" alt="" class="img-fluid">
+                            <h4>Porto Rico</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/republica_dominicana.jpg" alt="" class="img-fluid">
+                            <h4>Rep. Dominicana</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/suriname.jpg" alt="" class="img-fluid">
+                            <h4>Suriname</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/trinidad.jpg" alt="" class="img-fluid">
+                            <h4>Trinidad e Tobago</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/uruguai.jpg" alt="" class="img-fluid">
+                            <h4>Uruguai</h4>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-4 col-xl-3 country">
+                        <a href="">
+                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/flags/venezuela.jpg" alt="" class="img-fluid">
+                            <h4>Venezuela</h4>
+                        </a>
+                    </div>
+
+				</div>
+			</div>
+
+			<div class="col-md-4 col-lg-3" id="filterRight">
+				<div class="boxFilter">
+                    <h3><?php _e('VHL Network','cc'); ?></h3>
+                    <ul>
+                        <?php foreach ( $type_list as $type ) { ?>
+                            <li class="cat-item">
+                                <?php
+                                    $filter_link = 'search?';
+                                    if ($query != ''){
+                                        $filter_link .= 'q=' . $query . '&';
+                                    }
+                                    $filter_link .= 'filter=institution_type:"' . $type[0] . '"';
+                                    if ($user_filter != ''){
+                                        $filter_link .= ' AND ' . $user_filter ;
+                                    }
+                                ?>
+                                <a href='<?php echo $filter_link; ?>'><?php echo $type_translated[$type[0]]; ?></a>
+                                <span class="cat-item-count">(<?php echo $type[1]; ?>)</span>
+                            </li>
+                        <?php } ?>
+                    </ul>
+
+                    <h3><?php _e('Thematic Networks','cc'); ?></h3>
+                    <ul>
+                       <?php foreach ( $thematic_list as $thematic) { ?>
+                           <?php
+                               $filter_link = 'search?';
+                               if ($query != ''){
+                                   $filter_link .= 'q=' . $query . '&';
+                               }
+                               $filter_link .= 'filter=institution_thematic:"' . $thematic[0] . '"';
+                               if ($user_filter != ''){
+                                   $filter_link .= ' AND ' . $user_filter ;
+                               }
+                           ?>
+                           <li class="cat-item">
+                               <a href='<?php echo $filter_link; ?>'><?php echo $thematic_translated[$thematic[0]] ?></a>
+                               <span class="cat-item-count">(<?php echo $thematic[1] ?>)</span>
+                           </li>
+                         <?php } ?>
+                   </ul>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+<?php include('footer.php'); ?>

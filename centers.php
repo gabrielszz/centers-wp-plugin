@@ -4,11 +4,11 @@ Plugin Name: Cooperating Centers
 Plugin URI: https://github.com/bireme/centers-wp-plugin/
 Description: VHL Cooperating Centers Directory WordPress plugin
 Author: BIREME/OPAS/OMS
-Version: 0.1
+Version: 2.0
 Author URI: http://reddes.bvsalud.org/
 */
 
-define('CC_VERSION', '0.1' );
+define('CC_VERSION', '2.0' );
 
 define('CC_SYMBOLIC_LINK', false );
 define('CC_PLUGIN_DIRNAME', 'cc' );
@@ -40,7 +40,6 @@ if(!class_exists('CC_Plugin')) {
             add_action( 'init', array(&$this, 'load_translation'));
             add_action( 'admin_menu', array(&$this, 'admin_menu'));
             add_action( 'plugins_loaded', array(&$this, 'plugin_init'));
-            add_action( 'wp_head', array(&$this, 'google_analytics_code'));
             add_action( 'template_redirect', array(&$this, 'theme_redirect'));
             add_action( 'widgets_init', array(&$this, 'register_sidebars'));
             add_action( 'after_setup_theme', array(&$this, 'title_tag_setup'));
@@ -69,15 +68,11 @@ if(!class_exists('CC_Plugin')) {
         } // END public static function deactivate
 
         function load_translation(){
-            global $cc_texts;
-
 		    // load internal plugin translations
 		    load_plugin_textdomain('cc', false,  CC_PLUGIN_DIR . '/languages');
             // load plugin translations
             $site_language = strtolower(get_bloginfo('language'));
             $lang = substr($site_language,0,2);
-
-            $cc_texts = @parse_ini_file(CC_PLUGIN_PATH . "/languages/texts_" . $lang . ".ini", true);
 		}
 
 		function plugin_init() {
@@ -99,7 +94,7 @@ if(!class_exists('CC_Plugin')) {
 		}
 
 		function theme_redirect() {
-		    global $wp, $cc_service_url, $cc_plugin_slug, $cc_texts;
+		    global $wp, $cc_service_url, $cc_plugin_slug;
 		    $pagename = '';
 
             // check if request contains plugin slug string
@@ -114,15 +109,12 @@ if(!class_exists('CC_Plugin')) {
                 $cc_plugin_slug = $this->plugin_slug;
                 $similar_docs_url = $this->similar_docs_url;
 
-                if ($pagename == $this->plugin_slug || $pagename == $this->plugin_slug . '/resource'
-                    || $pagename == $this->plugin_slug . '/cc-feed') {
-
-    		        add_action( 'wp_enqueue_scripts', array(&$this, 'template_styles_scripts') );
+                if ( $this->startsWith($pagename, $this->plugin_slug) ){
 
     		        if ($pagename == $this->plugin_slug){
     		            $template = CC_PLUGIN_PATH . '/template/home.php';
-    		        }elseif ($pagename == $this->plugin_slug . '/cc-feed'){
-    		            $template = CC_PLUGIN_PATH . '/template/rss.php';
+                    }elseif ($pagename == $this->plugin_slug . '/search'){
+    		            $template = CC_PLUGIN_PATH . '/template/results.php';
     		        }else{
     		            $template = CC_PLUGIN_PATH . '/template/detail.php';
     		        }
@@ -241,11 +233,6 @@ if(!class_exists('CC_Plugin')) {
 		    return $form;
 		}
 
-		function template_styles_scripts(){
-            wp_enqueue_style ('cc-page', CC_PLUGIN_URL . 'template/css/style.css', array(), CC_VERSION);
-            wp_enqueue_script('cc-page', CC_PLUGIN_URL . 'template/js/functions.js', array(), CC_VERSION);
-		}
-
 		function register_settings(){
             register_setting('cc-settings-group', 'cc_config');
             wp_enqueue_style ('cc', CC_PLUGIN_URL . 'template/css/admin.css');
@@ -258,35 +245,14 @@ if(!class_exists('CC_Plugin')) {
             return $links;
         }
 
-		function google_analytics_code(){
-		    global $wp;
-
-		    $pagename = $wp->query_vars["pagename"];
-		    $plugin_config = get_option('cc_config');
-
-		    // check if is defined GA code and pagename starts with plugin slug
-		    if ($plugin_config['google_analytics_code'] != ''
-		        && strpos($pagename, $this->plugin_slug) === 0){
-
-		?>
-
-		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', '<?php echo $plugin_config['google_analytics_code'] ?>']);
-		  _gaq.push(['_setCookiePath', '/<?php echo $plugin_config['$this->plugin_slug'] ?>']);
-		  _gaq.push(['_trackPageview']);
-
-		  (function() {
-		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-
-		</script>
-
 		<?php
 		    } //endif
 		}
+
+        function startsWith ($string, $startString) {
+            $len = strlen($startString);
+            return (substr($string, 0, $len) === $startString);
+        }
 
 	}
 }

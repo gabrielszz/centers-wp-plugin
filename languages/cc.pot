@@ -1,32 +1,32 @@
-# Copyright (C) 2019 Cooperating Centers
+# Copyright (C) 2020 Cooperating Centers
 # This file is distributed under the same license as the Cooperating Centers package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Cooperating Centers 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2019-12-03 19:23:31+00:00\n"
+"POT-Creation-Date: 2020-02-12 13:11:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: centers.php:94 settings.php:8
+#: centers.php:90 settings.php:8
 msgid "Cooperating Centers Settings"
 msgstr ""
 
 #. #-#-#-#-#  centers.pot (Cooperating Centers 0.1)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: centers.php:94 centers.php:229
+#: centers.php:90 centers.php:222
 msgid "Cooperating Centers"
 msgstr ""
 
-#: centers.php:143
+#: centers.php:136
 msgid "Cooperating Centers Area"
 msgstr ""
 
-#: centers.php:154
+#: centers.php:147
 msgid "Cooperating Centers Header"
 msgstr ""
 
@@ -41,131 +41,99 @@ msgid "Plugin page"
 msgstr ""
 
 #: settings.php:21
-msgid "Filter query"
-msgstr ""
-
-#: settings.php:25
 msgid "Google Analytics code"
 msgstr ""
 
-#: settings.php:38
+#: settings.php:34
 msgid "Home URL"
 msgstr ""
 
-#: settings.php:43 settings.php:50
+#: settings.php:39 settings.php:46
 msgid "Page title"
 msgstr ""
 
-#: settings.php:59
-msgid "Page layout"
-msgstr ""
-
-#: settings.php:64
-msgid "Show filters as whole page"
-msgstr ""
-
-#: settings.php:71
-msgid "Show normal page"
-msgstr ""
-
-#: settings.php:78
-msgid "Search filters"
-msgstr ""
-
-#: settings.php:94
-msgid "Available"
-msgstr ""
-
-#: settings.php:113
-msgid "Selected"
-msgstr ""
-
-#: settings.php:133
+#: settings.php:54
 msgid "Save changes"
 msgstr ""
 
-#: template/home.php:71
-msgid "CoordinatingCentersRg"
+#: template/header.php:6 template/header.php:60
+msgid "VHL Network Directory"
 msgstr ""
 
-#: template/home.php:72
-msgid "CoordinatingCentersNc"
-msgstr ""
-
-#: template/home.php:73
-msgid "CooperatingCenters"
-msgstr ""
-
-#: template/home.php:74
-msgid "CooperatingCentersLILACS"
-msgstr ""
-
-#: template/home.php:75
-msgid "CooperatingCentersLEYES"
-msgstr ""
-
-#: template/home.php:76
-msgid "ParticipantsUnits"
-msgstr ""
-
-#: template/home.php:77
-msgid "VHLNetwork"
-msgstr ""
-
-#: template/home.php:79
-msgid "MedCarib"
-msgstr ""
-
-#: template/home.php:80
-msgid "Nursing"
-msgstr ""
-
-#: template/home.php:81
-msgid "Border"
-msgstr ""
-
-#: template/home.php:82
-msgid "Disastres"
-msgstr ""
-
-#: template/home.php:83
-msgid "Psychology"
-msgstr ""
-
-#: template/home.php:84
-msgid "MTCI"
-msgstr ""
-
-#: template/home.php:93
-msgid "Home"
-msgstr ""
-
-#: template/home.php:98
-msgid "Search result"
-msgstr ""
-
-#: template/home.php:114
-msgid "Enter one or more words"
-msgstr ""
-
-#: template/home.php:115
+#: template/header.php:75 template/header.php:81
 msgid "Search"
 msgstr ""
 
-#: template/home.php:124
+#: template/home.php:70 template/results.php:74
+msgid "CoordinatingCentersRg"
+msgstr ""
+
+#: template/home.php:71 template/results.php:75
+msgid "CoordinatingCentersNc"
+msgstr ""
+
+#: template/home.php:72 template/results.php:76
+msgid "CooperatingCenters"
+msgstr ""
+
+#: template/home.php:73 template/results.php:77
+msgid "CooperatingCentersLILACS"
+msgstr ""
+
+#: template/home.php:74 template/results.php:78
+msgid "CooperatingCentersLEYES"
+msgstr ""
+
+#: template/home.php:75 template/results.php:79
+msgid "ParticipantsUnits"
+msgstr ""
+
+#: template/home.php:76 template/results.php:80
+msgid "VHLNetwork"
+msgstr ""
+
+#: template/home.php:78 template/results.php:82
+msgid "MedCarib"
+msgstr ""
+
+#: template/home.php:79 template/results.php:83
+msgid "Nursing"
+msgstr ""
+
+#: template/home.php:80 template/results.php:84
+msgid "Border"
+msgstr ""
+
+#: template/home.php:81 template/results.php:85
+msgid "Disastres"
+msgstr ""
+
+#: template/home.php:82 template/results.php:86
+msgid "Psychology"
+msgstr ""
+
+#: template/home.php:83 template/results.php:87
+msgid "MTCI"
+msgstr ""
+
+#: template/home.php:327 template/results.php:89 template/results.php:190
+msgid "VHL Network"
+msgstr ""
+
+#: template/home.php:347 template/results.php:90 template/results.php:210
+msgid "Thematic Networks"
+msgstr ""
+
+#: template/results.php:91 template/results.php:230
+msgid "Country"
+msgstr ""
+
+#: template/results.php:103
 msgid "No results found"
 msgstr ""
 
-#: template/home.php:127 template/home.php:301
+#: template/results.php:105
 msgid "Institutions"
-msgstr ""
-
-#: template/home.php:155
-msgid "Filters"
-msgstr ""
-
-#: template/home.php:165
-msgid "Selected filters"
 msgstr ""
 
 #: template-functions.php:71
