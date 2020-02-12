@@ -72,7 +72,7 @@
                         <input type="hidden" name="lang" id="lang" value="<?php echo $lang; ?>">
 						<div class="row">
 							<div class="col-md-10 inputBoxSearch">
-								<input type="text" name="q" id="fieldSearch" placeholder="<?php _e('Search', 'cc'); ?>">
+								<input type="text" name="q" id="fieldSearch" placeholder="<?php _e('Search', 'cc'); ?>" value="<?php echo $query ?>">
 								<a id="speakBtn" href="#"><i class="fas fa-microphone-alt"></i></a>
 							</div>
 							<div class="col-md-2 btnBoxSearch">
