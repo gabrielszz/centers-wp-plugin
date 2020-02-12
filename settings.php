@@ -35,10 +35,6 @@ function cc_page_admin() {
                                 echo '    <td><input type="text" name="cc_config[' . $home_url . ']" value="' . $config[$home_url] . '" class="regular-text code"></td>';
                                 echo '</tr>';
 
-                                echo '<tr valign="top">';
-                                echo '    <th scope="row"> ' . __("Page title", "cc") . ' (' . $available_languages_name[$count] . '):</th>';
-                                echo '    <td><input type="text" name="cc_config[' . $key_name . ']" value="' . $config[$key_name] . '" class="regular-text code"></td>';
-                                echo '</tr>';
                                 $count++;
                             }
                         }else{

@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Cooperating Centers package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Cooperating Centers 0.1\n"
+"Project-Id-Version: Cooperating Centers 2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2020-02-12 13:11:57+00:00\n"
+"POT-Creation-Date: 2020-02-12 14:20:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,21 +12,21 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: centers.php:90 settings.php:8
+#: centers.php:89 settings.php:8
 msgid "Cooperating Centers Settings"
 msgstr ""
 
-#. #-#-#-#-#  centers.pot (Cooperating Centers 0.1)  #-#-#-#-#
+#. #-#-#-#-#  centers.pot (Cooperating Centers 2.0)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: centers.php:90 centers.php:222
+#: centers.php:89 centers.php:221
 msgid "Cooperating Centers"
 msgstr ""
 
-#: centers.php:136
+#: centers.php:135
 msgid "Cooperating Centers Area"
 msgstr ""
 
-#: centers.php:147
+#: centers.php:146
 msgid "Cooperating Centers Header"
 msgstr ""
 
@@ -48,15 +48,16 @@ msgstr ""
 msgid "Home URL"
 msgstr ""
 
-#: settings.php:39 settings.php:46
+#: settings.php:42
 msgid "Page title"
 msgstr ""
 
-#: settings.php:54
+#: settings.php:50
 msgid "Save changes"
 msgstr ""
 
-#: template/header.php:6 template/header.php:60
+#: template/header.php:6 template/header.php:60 template/home.php:95
+#: template/results.php:104
 msgid "VHL Network Directory"
 msgstr ""
 
@@ -64,75 +65,83 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: template/home.php:70 template/results.php:74
+#: template/home.php:69 template/results.php:74
 msgid "CoordinatingCentersRg"
 msgstr ""
 
-#: template/home.php:71 template/results.php:75
+#: template/home.php:70 template/results.php:75
 msgid "CoordinatingCentersNc"
 msgstr ""
 
-#: template/home.php:72 template/results.php:76
+#: template/home.php:71 template/results.php:76
 msgid "CooperatingCenters"
 msgstr ""
 
-#: template/home.php:73 template/results.php:77
+#: template/home.php:72 template/results.php:77
 msgid "CooperatingCentersLILACS"
 msgstr ""
 
-#: template/home.php:74 template/results.php:78
+#: template/home.php:73 template/results.php:78
 msgid "CooperatingCentersLEYES"
 msgstr ""
 
-#: template/home.php:75 template/results.php:79
+#: template/home.php:74 template/results.php:79
 msgid "ParticipantsUnits"
 msgstr ""
 
-#: template/home.php:76 template/results.php:80
+#: template/home.php:75 template/results.php:80
 msgid "VHLNetwork"
 msgstr ""
 
-#: template/home.php:78 template/results.php:82
+#: template/home.php:77 template/results.php:82
 msgid "MedCarib"
 msgstr ""
 
-#: template/home.php:79 template/results.php:83
+#: template/home.php:78 template/results.php:83
 msgid "Nursing"
 msgstr ""
 
-#: template/home.php:80 template/results.php:84
+#: template/home.php:79 template/results.php:84
 msgid "Border"
 msgstr ""
 
-#: template/home.php:81 template/results.php:85
+#: template/home.php:80 template/results.php:85
 msgid "Disastres"
 msgstr ""
 
-#: template/home.php:82 template/results.php:86
+#: template/home.php:81 template/results.php:86
 msgid "Psychology"
 msgstr ""
 
-#: template/home.php:83 template/results.php:87
+#: template/home.php:82 template/results.php:87
 msgid "MTCI"
 msgstr ""
 
-#: template/home.php:327 template/results.php:89 template/results.php:190
+#: template/home.php:92 template/results.php:101
+msgid "Home"
+msgstr ""
+
+#: template/home.php:338 template/results.php:89 template/results.php:204
 msgid "VHL Network"
 msgstr ""
 
-#: template/home.php:347 template/results.php:90 template/results.php:210
+#: template/home.php:358 template/results.php:90 template/results.php:224
 msgid "Thematic Networks"
 msgstr ""
 
-#: template/results.php:91 template/results.php:230
+#: template/results.php:91 template/results.php:244
 msgid "Country"
 msgstr ""
 
-#: template/results.php:103
+#: template/results.php:107
+msgid "Results"
+msgstr ""
+
+#: template/results.php:117
 msgid "No results found"
 msgstr ""
 
-#: template/results.php:105
+#: template/results.php:119
 msgid "Institutions"
 msgstr ""
 

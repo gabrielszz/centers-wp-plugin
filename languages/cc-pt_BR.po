@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LeisRef 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2020-02-12 13:11:57+00:00\n"
-"PO-Revision-Date: 2020-02-12 11:13-0200\n"
+"POT-Creation-Date: 2020-02-12 14:20:39+00:00\n"
+"PO-Revision-Date: 2020-02-12 12:20-0200\n"
 "Last-Translator: Vinicius de Andrade <antoniov@paho.org>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -14,20 +14,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: centers.php:90 settings.php:8
+#: centers.php:89 settings.php:8
 msgid "Cooperating Centers Settings"
 msgstr "Centros Cooperantes Ajustes"
 
 #. Plugin Name of the plugin/theme
-#: centers.php:90 centers.php:222
+#: centers.php:89 centers.php:221
 msgid "Cooperating Centers"
 msgstr "Centros Cooperantes"
 
-#: centers.php:136
+#: centers.php:135
 msgid "Cooperating Centers Area"
 msgstr "Centros Cooperantes Área"
 
-#: centers.php:147
+#: centers.php:146
 msgid "Cooperating Centers Header"
 msgstr "Centros Cooperantes Cabeçalho"
 
@@ -49,15 +49,16 @@ msgstr "Código do Google Analytics"
 msgid "Home URL"
 msgstr "Início"
 
-#: settings.php:39 settings.php:46
+#: settings.php:42
 msgid "Page title"
 msgstr "Título da página"
 
-#: settings.php:54
+#: settings.php:50
 msgid "Save changes"
 msgstr "Salvar mudanças"
 
-#: template/header.php:6 template/header.php:60
+#: template/header.php:6 template/header.php:60 template/home.php:95
+#: template/results.php:104
 msgid "VHL Network Directory"
 msgstr "Diretório da Rede BVS"
 
@@ -65,75 +66,83 @@ msgstr "Diretório da Rede BVS"
 msgid "Search"
 msgstr "Buscar"
 
-#: template/home.php:70 template/results.php:74
+#: template/home.php:69 template/results.php:74
 msgid "CoordinatingCentersRg"
 msgstr "Centros Coordenadores Regionais"
 
-#: template/home.php:71 template/results.php:75
+#: template/home.php:70 template/results.php:75
 msgid "CoordinatingCentersNc"
 msgstr "Centros Coordenadores Nacionais"
 
-#: template/home.php:72 template/results.php:76
+#: template/home.php:71 template/results.php:76
 msgid "CooperatingCenters"
 msgstr "Centros Cooperantes"
 
-#: template/home.php:73 template/results.php:77
+#: template/home.php:72 template/results.php:77
 msgid "CooperatingCentersLILACS"
 msgstr "Centros Cooperantes LILACS"
 
-#: template/home.php:74 template/results.php:78
+#: template/home.php:73 template/results.php:78
 msgid "CooperatingCentersLEYES"
 msgstr "Centros Cooperantes LEYES"
 
-#: template/home.php:75 template/results.php:79
+#: template/home.php:74 template/results.php:79
 msgid "ParticipantsUnits"
 msgstr "Unidades Participantes"
 
-#: template/home.php:76 template/results.php:80
+#: template/home.php:75 template/results.php:80
 msgid "VHLNetwork"
 msgstr "Rede BVS"
 
-#: template/home.php:78 template/results.php:82
+#: template/home.php:77 template/results.php:82
 msgid "MedCarib"
 msgstr "MedCarib"
 
-#: template/home.php:79 template/results.php:83
+#: template/home.php:78 template/results.php:83
 msgid "Nursing"
 msgstr "Enfermagem"
 
-#: template/home.php:80 template/results.php:84
+#: template/home.php:79 template/results.php:84
 msgid "Border"
 msgstr "Saúde Frontera México-Estados Unidos"
 
-#: template/home.php:81 template/results.php:85
+#: template/home.php:80 template/results.php:85
 msgid "Disastres"
 msgstr "Desastres"
 
-#: template/home.php:82 template/results.php:86
+#: template/home.php:81 template/results.php:86
 msgid "Psychology"
 msgstr "Psicologia"
 
-#: template/home.php:83 template/results.php:87
+#: template/home.php:82 template/results.php:87
 msgid "MTCI"
 msgstr "Medicina Tradicional e Complementar"
 
-#: template/home.php:327 template/results.php:89 template/results.php:190
+#: template/home.php:92 template/results.php:101
+msgid "Home"
+msgstr "Início"
+
+#: template/home.php:338 template/results.php:89 template/results.php:204
 msgid "VHL Network"
 msgstr "Rede BVS"
 
-#: template/home.php:347 template/results.php:90 template/results.php:210
+#: template/home.php:358 template/results.php:90 template/results.php:224
 msgid "Thematic Networks"
 msgstr "Redes Temáticas"
 
-#: template/results.php:91 template/results.php:230
+#: template/results.php:91 template/results.php:244
 msgid "Country"
 msgstr "País"
 
-#: template/results.php:103
+#: template/results.php:107
+msgid "Results"
+msgstr "Resultados"
+
+#: template/results.php:117
 msgid "No results found"
 msgstr "Nenhum resultado encontrado"
 
-#: template/results.php:105
+#: template/results.php:119
 msgid "Institutions"
 msgstr "Instituições"
 
@@ -156,6 +165,9 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://reddes.bvsalud.org/"
 msgstr ""
+
+#~ msgid "Search result"
+#~ msgstr "Resultado da pesquisa"
 
 #~ msgid "Selected filters"
 #~ msgstr "Selecione os filtros"
@@ -180,12 +192,6 @@ msgstr ""
 
 #~ msgid "Selected"
 #~ msgstr "Selecionados"
-
-#~ msgid "Home"
-#~ msgstr "Início"
-
-#~ msgid "Search result"
-#~ msgstr "Resultado da pesquisa"
 
 #~ msgid "Enter one or more words"
 #~ msgstr "Entre uma ou mais palavras"

@@ -64,7 +64,6 @@ $pages = new Paginator($total, $start, $count);
 $pages->paginate($page_url_params);
 
 $home_url = isset($cc_config['home_url_' . $lang]) ? $cc_config['home_url_' . $lang] : real_site_url();
-$plugin_breadcrumb = isset($cc_config['plugin_title_' . $lang]) ? $cc_config['plugin_title_' . $lang] : $cc_config['plugin_title'];
 
 /* filters translations */
 $type_translated['CoordinatingCentersRg'] = __('CoordinatingCentersRg','cc');
@@ -87,6 +86,16 @@ $thematic_translated['MTCI'] = __('MTCI','cc');
 <?php include('header.php') ?>
 
 <section class="container" id="main_container">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="<?php echo $home_url ?>"><?php _e('Home','cc'); ?></a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    <?php _e('VHL Network Directory', 'cc'); ?>
+                </li>
+            </ol>
+        </nav>
 		<div class="row">
 			<div class="col-12 col-md-8 col-lg-9">
 				<div class="row">

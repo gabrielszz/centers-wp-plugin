@@ -146,6 +146,9 @@
 .box1:hover{
 	background-color: #fcfff1;
 }
+.breadcrumb{
+    background-color: #fff;
+}
 @media (max-width: 768px){
 	#header{
 		text-align: center;

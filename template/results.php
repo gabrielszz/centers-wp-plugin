@@ -95,6 +95,20 @@ $filter_title_translated['country'] = __('Country', 'cc');
 <?php include('header.php') ?>
 
 <section class="container" id="main_container">
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="<?php echo $home_url ?>"><?php _e('Home','cc'); ?></a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="<?php echo real_site_url($cc_plugin_slug); ?>"><?php _e('VHL Network Directory', 'cc'); ?></a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+                <?php _e('Results', 'cc') ?>
+            </li>
+        </ol>
+    </nav>
+
 	<div class="row">
 		<div class="col-12 col-md-8 col-lg-9">
             <h2 class="text-center">
@@ -207,45 +221,49 @@ $filter_title_translated['country'] = __('Country', 'cc');
                     <?php } ?>
                 </ul>
 
-			    <h3><?php _e('Thematic Networks','cc'); ?></h3>
-			   	<ul>
-                    <?php foreach ( $thematic_list as $thematic) { ?>
-                        <?php
-                            $filter_link = '?';
-                            if ($query != ''){
-                                $filter_link .= 'q=' . $query . '&';
-                            }
-                            $filter_link .= 'filter=institution_thematic:"' . $thematic[0] . '"';
-                            if ($user_filter != ''){
-                                $filter_link .= ' AND ' . $user_filter ;
-                            }
-                        ?>
-                        <li class="cat-item">
-                            <a href='<?php echo $filter_link; ?>'><?php echo $thematic_translated[$thematic[0]] ?></a>
-                            <span class="cat-item-count">(<?php echo $thematic[1] ?>)</span>
-                        </li>
-                      <?php } ?>
-				</ul>
+                <?php if ($thematic_list): ?>
+    			    <h3><?php _e('Thematic Networks','cc'); ?></h3>
+    			   	<ul>
+                        <?php foreach ($thematic_list as $thematic) { ?>
+                            <?php
+                                $filter_link = '?';
+                                if ($query != ''){
+                                    $filter_link .= 'q=' . $query . '&';
+                                }
+                                $filter_link .= 'filter=institution_thematic:"' . $thematic[0] . '"';
+                                if ($user_filter != ''){
+                                    $filter_link .= ' AND ' . $user_filter ;
+                                }
+                            ?>
+                            <li class="cat-item">
+                                <a href='<?php echo $filter_link; ?>'><?php echo $thematic_translated[$thematic[0]] ?></a>
+                                <span class="cat-item-count">(<?php echo $thematic[1] ?>)</span>
+                            </li>
+                          <?php } ?>
+    				</ul>
+                <?php endif; ?>
 
-                <h3><?php _e('Country','cc'); ?></h3>
-                <ul>
-                    <?php foreach ( $country_list as $country ) { ?>
-                        <?php
-                            $filter_link = '?';
-                            if ($query != ''){
-                                $filter_link .= 'q=' . $query . '&';
-                            }
-                            $filter_link .= 'filter=country:"' . $country[0] . '"';
-                            if ($user_filter != ''){
-                                $filter_link .= ' AND ' . $user_filter ;
-                            }
-                        ?>
-                        <li class="cat-item">
-                            <a href='<?php echo $filter_link; ?>'><?php print_lang_value($country[0], $site_language)?></a>
-                            <span class="cat-item-count">(<?php echo $country[1] ?>)</span>
-                        </li>
-                    <?php } ?>
-                </ul>
+                <?php if ($country_list): ?>
+                    <h3><?php _e('Country','cc'); ?></h3>
+                    <ul>
+                        <?php foreach ( $country_list as $country ) { ?>
+                            <?php
+                                $filter_link = '?';
+                                if ($query != ''){
+                                    $filter_link .= 'q=' . $query . '&';
+                                }
+                                $filter_link .= 'filter=country:"' . $country[0] . '"';
+                                if ($user_filter != ''){
+                                    $filter_link .= ' AND ' . $user_filter ;
+                                }
+                            ?>
+                            <li class="cat-item">
+                                <a href='<?php echo $filter_link; ?>'><?php print_lang_value($country[0], $site_language)?></a>
+                                <span class="cat-item-count">(<?php echo $country[1] ?>)</span>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                <?php endif; ?>
             </div>
         </div>
     </div>
