@@ -113,7 +113,7 @@ if(!class_exists('CC_Plugin')) {
 
     		        if ($pagename == $this->plugin_slug){
     		            $template = CC_PLUGIN_PATH . '/template/home.php';
-                    }elseif ($pagename == $this->plugin_slug . '/search'){
+                    }elseif ($pagename == $this->plugin_slug . '/results'){
     		            $template = CC_PLUGIN_PATH . '/template/results.php';
     		        }else{
     		            $template = CC_PLUGIN_PATH . '/template/detail.php';
