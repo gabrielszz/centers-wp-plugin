@@ -104,62 +104,98 @@ $filter_title_translated['country'] = __('Country', 'cc');
                 <a href="<?php echo real_site_url($cc_plugin_slug); ?>"><?php _e('VHL Network Directory', 'cc'); ?></a>
             </li>
             <li class="breadcrumb-item" aria-current="page">
-                <?php _e('Results', 'cc') ?>
+                <?php
+                    if ( isset($total) && strval($total) == 0) {
+                       echo __('No results found','cc');
+                   }elseif (strval($total) > 1) {
+                       echo $total . ' ' . __('Institutions','cc');
+                   }else{
+                       echo $center_list[0]->title;
+                   }
+                ?>
             </li>
         </ol>
     </nav>
 
 	<div class="row">
 		<div class="col-12 col-md-8 col-lg-9">
-            <h2 class="text-center">
+            <div class="row">
                 <?php
-                    if ( isset($total) && strval($total) == 0) {
-                       echo __('No results found','cc');
-                   }elseif (strval($total) > 1) {
-                       echo $total . ' ' . __('Institutions','cc');
-                   }
-                ?>
-            </h2>
-
-            <?php
-            foreach ( $center_list as $resource) {
-                echo '<article>';
-                echo '<div class="box1">';
-                echo '<strong>' . $resource->title . '<br/>';
-                if ($resource->unit){
-                    foreach ( $resource->unit as $unit ){
-                        echo $unit . '<br/>';
+                foreach ( $center_list as $resource) {
+                    $pos++;
+                    echo '<article class="col-lg-' . ($total == '1'? '12' : '6') . '">';
+                    echo '<div class="box1">';
+                    echo '<span class="badge badge-info">' . strval( intval($start) + $pos ) . '/' . $total . '</span>';
+                    echo '<h3 class="box1Title">';
+                    echo $resource->title . '<br/>';
+                    if ($resource->unit){
+                        echo '<small>';
+                        foreach ( $resource->unit as $unit ){
+                            echo $unit . '<br/>';
+                        }
+                        echo '</small>';
                     }
-                }
-                echo '</strong>';
+                    echo '</h3>';
 
-                echo $resource->cooperative_center_code . '<br/>';
-                if ($resource->institution_type){
-                    $exclude_common_types = array('CooperatingCenters', 'ParticipantsUnits', 'VHLNetwork');
-                    foreach ( $resource->institution_type as $type ){
-                        if ( !in_array($type, $exclude_common_types) ){
+                    echo '<table class="table table-sm ">';
+                    echo '<tr>';
+                    echo '  <td width="30px"></td>';
+                    echo '  <td>' . $resource->cooperative_center_code . '</td>';
+                    echo '</tr>';
+
+                    if ($resource->institution_type){
+                        echo '<tr>';
+                        echo '  <td valign="top"><i class="fas fa-table"></i></td>';
+                        echo '    <td>';
+                        $exclude_common_types = array('CooperatingCenters', 'ParticipantsUnits', 'VHLNetwork');
+                        foreach ( $resource->institution_type as $type ){
                             echo $type_translated[$type] . '<br/>';
                         }
+                        echo '   </td>';
+                        echo '</tr>';
                     }
-                }
-                if ($resource->address){
-                    echo '<p>' . $resource->address[0] . '<br/>';
-                    echo $resource->city . ' - ' . $resource->state[0] . '- ' . get_lang_value($resource->country, $lang) . '</p>';
-                }
-                if ($resource->contact){
-                    foreach ( $resource->contact as $contact ){
-                        echo $contact . '<br/>';
-                    }
-                }
 
-                echo '</div>';
-                echo '</article>';
-            }
-            ?>
+                    if ($resource->address){
+                        $full_address = $resource->address[0] . ' - ' . $resource->city . ' - ' . $resource->state[0] . ' - ' . get_lang_value($resource->country, $lang);
+                        echo '<tr>';
+                        echo '    <td valign="top"><i class="fas fa-map-marker-alt"></i></td>';
+                        echo '    <td>';
+                        echo '      <a href="https://www.google.com/maps/search/' . $full_address . '" target="_blank">' . $full_address . '</a>';
+                        echo '    </td>';
+                        echo '</tr>';
+                    }
+
+                    if ($resource->contact){
+                        echo '<tr>';
+                        echo '    <td valign="top"><i class="far fa-envelope-open"></i></td>';
+                        echo '    <td>';
+                        foreach ( $resource->contact as $contact ){
+                            echo $contact . '<br/>';
+                        }
+                        echo '</td>';
+                        echo '</tr>';
+                    }
+                    if ($resource->link){
+                        echo '<tr>';
+                        echo '	<td valign="top"><i class="fas fa-tv"></i></td>';
+                        foreach ( $resource->link as $link ){
+                            $link_norm = ( substr($link, 0, 4) != 'http' ? 'http://' . $link : $link );
+                        	echo '<td><a href="' . $link_norm . '" target="_blank">'  . $link . '</a></td>';
+                        }
+                        echo '</tr>';
+                    }
+                    echo '</table>';
+                    echo '</div>';
+                    echo '</article>';
+                }
+                ?>
+
+            </div> <!-- /row results area -->
             <hr>
             <?php echo $pages->display_pages(); ?>
+        </div> <!-- /col results area -->
 
-        </div>
+
         <div class="col-md-4 col-lg-3" id="filterRight">
             <div class="boxFilter">
                 <?php if ($applied_filter_list) :?>
@@ -169,39 +205,40 @@ $filter_title_translated['country'] = __('Country', 'cc');
                         <input type="hidden" name="filter" id="filter" value="" >
 
                         <?php foreach ( $applied_filter_list as $filter => $filter_values ) :?>
-                            <h4><?php echo $filter_title_translated[$filter]; ?></h4>
-                            <ul>
-                            <?php foreach ( $filter_values as $value ) :?>
-                                <input type="hidden" name="apply_filter" class="apply_filter"
-                                        id="<?php echo md5($value) ?>" value='<?php echo $filter . ':"' . $value . '"'; ?>' >
-                                <li>
-                                    <span class="filter-item">
-                                        <?php
-                                            if ($filter == 'country'){
-                                                echo print_lang_value($value, $site_language);
-                                            }elseif ($filter == 'institution_type'){
-                                                echo $type_translated[$value];
-                                            }elseif ($filter == 'institution_thematic'){
-                                                echo $thematic_translated[$value];
-                                            }else{
-                                                echo $value;
-                                            }
-                                        ?>
-                                    </span>
-                                    <span class="filter-item-del">
-                                        <a href="javascript:remove_filter('<?php echo md5($value) ?>')">
-                                            <img src="<?php echo CC_PLUGIN_URL; ?>template/images/del.png">
-                                        </a>
-                                    </span>
-                                </li>
-                            <?php endforeach; ?>
-                            </ul>
+                            <?php if ($filter != 'country_code'): ?>
+                                <h5><?php echo $filter_title_translated[$filter]; ?></h5>
+                                <ul>
+                                <?php foreach ( $filter_values as $value ) :?>
+                                    <input type="hidden" name="apply_filter" class="apply_filter"
+                                            id="<?php echo md5($value) ?>" value='<?php echo $filter . ':"' . $value . '"'; ?>' >
+                                    <li>
+                                        <span class="filter-item">
+                                            <?php
+                                                if ($filter == 'country'){
+                                                    echo print_lang_value($value, $site_language);
+                                                }elseif ($filter == 'institution_type'){
+                                                    echo $type_translated[$value];
+                                                }elseif ($filter == 'institution_thematic'){
+                                                    echo $thematic_translated[$value];
+                                                }else{
+                                                    echo $value;
+                                                }
+                                            ?>
+                                        </span>
+                                        <span class="filter-item-del">
+                                            <a href="javascript:remove_filter('<?php echo md5($value) ?>')">
+                                                <img src="<?php echo CC_PLUGIN_URL; ?>template/images/del.png">
+                                            </a>
+                                        </span>
+                                    </li>
+                                <?php endforeach; ?>
+                                </ul>
+                            <?php endif; ?>
                         <?php endforeach; ?>
                     </form>
-                    <hr/>
                 <?php endif; ?>
 
-                <h3><?php _e('VHL Network','cc'); ?></h3>
+                <h5 class="box1Title"><?php _e('VHL Network','cc'); ?></h5>
                 <ul>
                     <?php foreach ( $type_list as $type ) { ?>
                         <li class="cat-item">
@@ -222,7 +259,7 @@ $filter_title_translated['country'] = __('Country', 'cc');
                 </ul>
 
                 <?php if ($thematic_list): ?>
-    			    <h3><?php _e('Thematic Networks','cc'); ?></h3>
+    			    <h5 class="box1Title"><?php _e('Thematic Networks','cc'); ?></h5>
     			   	<ul>
                         <?php foreach ($thematic_list as $thematic) { ?>
                             <?php
@@ -244,7 +281,7 @@ $filter_title_translated['country'] = __('Country', 'cc');
                 <?php endif; ?>
 
                 <?php if ($country_list): ?>
-                    <h3><?php _e('Country','cc'); ?></h3>
+                    <h5 class="box1Title"><?php _e('Country','cc'); ?></h5>
                     <ul>
                         <?php foreach ( $country_list as $country ) { ?>
                             <?php
