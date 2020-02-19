@@ -112,7 +112,8 @@ if(!class_exists('CC_Plugin')) {
                 if ( $this->startsWith($pagename, $this->plugin_slug) ){
 
     		        if ($pagename == $this->plugin_slug){
-    		            $template = CC_PLUGIN_PATH . '/template/home.php';
+    		            #$template = CC_PLUGIN_PATH . '/template/home.php';
+    		            $template = CC_PLUGIN_PATH . '/template/results.php';
                     }elseif ($pagename == $this->plugin_slug . '/results'){
     		            $template = CC_PLUGIN_PATH . '/template/results.php';
     		        }else{
