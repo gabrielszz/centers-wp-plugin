@@ -59,13 +59,26 @@
 				<div id="titleMain" class="float-left">
 					<div class="titleMain1"><?php _e('VHL Network Directory', 'cc'); ?></div>
 				</div>
+                <?php if ( $available_languages ) : ?>
 				<div class="lang">
 					<ul>
-						<li><a href="" class="active">português</a></li>
-						<li><a href="">español</a></li>
-						<li><a href="">english</a></li>
+                        <?php
+                            for ($count = 0; $count < count($available_languages); $count++) {
+                                $for_lang = $available_languages[$count];
+                                $for_lang_name = $available_languages_name[$count];
+                                $lang_slug = ($for_lang != $default_language ? $for_lang : '');
+						        echo '<li>';
+                                if ($lang != $for_lang) {
+                                    echo '<a href="' . site_url($lang_slug . '/' . $cc_plugin_slug) . '">' . $for_lang_name . '</a></li>';
+                                }else{
+                                    echo '<a href="" class="active">' . $for_lang_name . '</a></li>';
+                                }
+                                echo '</li>';
+                            }
+                         ?>
 					</ul>
 				</div>
+            <?php endif; ?>
 				<div class="clearfix"></div>
 				<div class="headerSearch" >
 					<form action="<?php echo real_site_url($cc_plugin_slug); ?>/results">

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LeisRef 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2019-12-03 19:23:31+00:00\n"
-"PO-Revision-Date: 2019-12-03 17:25-0200\n"
+"POT-Creation-Date: 2020-02-19 19:03:08+00:00\n"
+"PO-Revision-Date: 2020-02-19 17:08-0300\n"
 "Last-Translator: Vinicius de Andrade <antoniov@paho.org>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -14,20 +14,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: centers.php:94 settings.php:8
+#: centers.php:89 settings.php:8
 msgid "Cooperating Centers Settings"
 msgstr "Centros Cooperantes Ajustes"
 
 #. Plugin Name of the plugin/theme
-#: centers.php:94 centers.php:229
+#: centers.php:89 centers.php:222
 msgid "Cooperating Centers"
 msgstr "Centros Cooperantes"
 
-#: centers.php:143
+#: centers.php:136
 msgid "Cooperating Centers Area"
 msgstr "Centros Cooperantes Area"
 
-#: centers.php:154
+#: centers.php:147
 msgid "Cooperating Centers Header"
 msgstr "Centros Cooperantes Encabezado"
 
@@ -42,132 +42,113 @@ msgid "Plugin page"
 msgstr "Pagina del plugin"
 
 #: settings.php:21
-msgid "Filter query"
-msgstr "Filtro de búsqueda"
-
-#: settings.php:25
 msgid "Google Analytics code"
 msgstr "Código del Google Analytics"
 
-#: settings.php:38
+#: settings.php:34
 msgid "Home URL"
 msgstr "Enlace de la página inicial"
 
-#: settings.php:43 settings.php:50
+#: settings.php:42
 msgid "Page title"
 msgstr "Titulo"
 
-#: settings.php:59
-msgid "Page layout"
-msgstr "Diseño de página"
-
-#: settings.php:64
-msgid "Show filters as whole page"
-msgstr "Mostrar filtros como página completa"
-
-#: settings.php:71
-msgid "Show normal page"
-msgstr "Mostrar página normal"
-
-#: settings.php:78
-msgid "Search filters"
-msgstr "Filtros de búsqueda"
-
-#: settings.php:94
-msgid "Available"
-msgstr "Disponible"
-
-#: settings.php:113
-msgid "Selected"
-msgstr "Seleccionados"
-
-#: settings.php:133
+#: settings.php:50
 msgid "Save changes"
 msgstr "Guardar cambios"
 
-#: template/home.php:71
-msgid "CoordinatingCentersRg"
-msgstr "Centros Coordinadores Regionales"
+#: template/header.php:6 template/header.php:60 template/home.php:95
+#: template/results.php:104
+msgid "VHL Network Directory"
+msgstr "Directorio de la Red BVS"
 
-#: template/home.php:72
-msgid "CoordinatingCentersNc"
-msgstr "Centros Coordinadores Nacionales"
-
-#: template/home.php:73
-msgid "CooperatingCenters"
-msgstr "Centros Cooperantes"
-
-#: template/home.php:74
-msgid "CooperatingCentersLILACS"
-msgstr "Centros Cooperantes LILACS"
-
-#: template/home.php:75
-msgid "CooperatingCentersLEYES"
-msgstr "Centros Cooperantes LEYES"
-
-#: template/home.php:76
-msgid "ParticipantsUnits"
-msgstr "Unidades Participantes"
-
-#: template/home.php:77
-msgid "VHLNetwork"
-msgstr "Red BVS"
-
-#: template/home.php:79
-msgid "MedCarib"
-msgstr "MedCarib"
-
-#: template/home.php:80
-msgid "Nursing"
-msgstr "Enfermería"
-
-#: template/home.php:81
-msgid "Border"
-msgstr "Salud Fronteriza México-Estados Unidos"
-
-#: template/home.php:82
-msgid "Disastres"
-msgstr "Disastres"
-
-#: template/home.php:83
-msgid "Psychology"
-msgstr "Psicología"
-
-#: template/home.php:84
-msgid "MTCI"
-msgstr "Medicina Tradicional y Complementaria"
-
-#: template/home.php:93
-msgid "Home"
-msgstr "Inicio"
-
-#: template/home.php:98
-msgid "Search result"
-msgstr "Resultado de la búsqueda"
-
-#: template/home.php:114
-msgid "Enter one or more words"
-msgstr "Ingrese una o más palabras"
-
-#: template/home.php:115
+#: template/header.php:75 template/header.php:81
 msgid "Search"
 msgstr "Buscar"
 
-#: template/home.php:124
+#: template/home.php:69 template/results.php:74
+msgid "CoordinatingCentersRg"
+msgstr "Centros Coordinadores Regionales"
+
+#: template/home.php:70 template/results.php:75
+msgid "CoordinatingCentersNc"
+msgstr "Centros Coordinadores Nacionales"
+
+#: template/home.php:71 template/results.php:76
+msgid "CooperatingCenters"
+msgstr "Centros Cooperantes"
+
+#: template/home.php:72 template/results.php:77
+msgid "CooperatingCentersLILACS"
+msgstr "Centros Cooperantes LILACS"
+
+#: template/home.php:73 template/results.php:78
+msgid "CooperatingCentersLEYES"
+msgstr "Centros Cooperantes LEYES"
+
+#: template/home.php:74 template/results.php:79
+msgid "ParticipantsUnits"
+msgstr "Unidades Participantes"
+
+#: template/home.php:75 template/results.php:80
+msgid "VHLNetwork"
+msgstr "Red BVS"
+
+#: template/home.php:77 template/results.php:82
+msgid "MedCarib"
+msgstr "MedCarib"
+
+#: template/home.php:78 template/results.php:83
+msgid "Nursing"
+msgstr "Enfermería"
+
+#: template/home.php:79 template/results.php:84
+msgid "Border"
+msgstr "Salud Fronteriza México-Estados Unidos"
+
+#: template/home.php:80 template/results.php:85
+msgid "Disastres"
+msgstr "Disastres"
+
+#: template/home.php:81 template/results.php:86
+msgid "Psychology"
+msgstr "Psicología"
+
+#: template/home.php:82 template/results.php:87
+msgid "MTCI"
+msgstr "Medicina Tradicional y Complementaria"
+
+#: template/home.php:92 template/results.php:101
+msgid "Home"
+msgstr "Inicio"
+
+#: template/home.php:338 template/results.php:89 template/results.php:247
+msgid "VHL Network"
+msgstr "Red BVS"
+
+#: template/home.php:358 template/results.php:90 template/results.php:268
+msgid "Thematic Networks"
+msgstr "Redes Tematicas"
+
+#: template/results.php:91 template/results.php:290
+msgid "Country"
+msgstr "País"
+
+#: template/results.php:109
 msgid "No results found"
 msgstr "No se han encontrado resultados"
 
-#: template/home.php:127 template/home.php:301
+#: template/results.php:111
 msgid "Institutions"
 msgstr "Instituciones"
 
-#: template/home.php:155
-msgid "Filters"
-msgstr "Filtros"
+#: template/results.php:132
+msgid "INACTIVE"
+msgstr "INACTIVA"
 
-#: template/home.php:165
-msgid "Selected filters"
-msgstr "Filtros seleccionados"
+#: template/results.php:134
+msgid "CLOSED"
+msgstr "CERRADA"
 
 #: template-functions.php:71
 msgid "of"
@@ -188,6 +169,39 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "http://reddes.bvsalud.org/"
 msgstr ""
+
+#~ msgid "Filter query"
+#~ msgstr "Filtro de búsqueda"
+
+#~ msgid "Page layout"
+#~ msgstr "Diseño de página"
+
+#~ msgid "Show filters as whole page"
+#~ msgstr "Mostrar filtros como página completa"
+
+#~ msgid "Show normal page"
+#~ msgstr "Mostrar página normal"
+
+#~ msgid "Search filters"
+#~ msgstr "Filtros de búsqueda"
+
+#~ msgid "Available"
+#~ msgstr "Disponible"
+
+#~ msgid "Selected"
+#~ msgstr "Seleccionados"
+
+#~ msgid "Search result"
+#~ msgstr "Resultado de la búsqueda"
+
+#~ msgid "Enter one or more words"
+#~ msgstr "Ingrese una o más palabras"
+
+#~ msgid "Filters"
+#~ msgstr "Filtros"
+
+#~ msgid "Selected filters"
+#~ msgstr "Filtros seleccionados"
 
 #~ msgid "Centers"
 #~ msgstr "Centros"
@@ -267,9 +281,6 @@ msgstr ""
 #~ msgid "Act type"
 #~ msgstr "Tipo del acto"
 
-#~ msgid "Country/region"
-#~ msgstr "País/región"
-
 #~ msgid "Database"
 #~ msgstr "Base de datos"
 
@@ -278,9 +289,6 @@ msgstr ""
 
 #~ msgid "Total"
 #~ msgstr "Total"
-
-#~ msgid "Legislation Directory"
-#~ msgstr "Directorio de legislación"
 
 #~ msgid "Ementa"
 #~ msgstr "Ementa"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cooperating Centers 2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2020-02-12 14:20:39+00:00\n"
+"POT-Creation-Date: 2020-02-19 19:03:08+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,15 +18,15 @@ msgstr ""
 
 #. #-#-#-#-#  centers.pot (Cooperating Centers 2.0)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: centers.php:89 centers.php:221
+#: centers.php:89 centers.php:222
 msgid "Cooperating Centers"
 msgstr ""
 
-#: centers.php:135
+#: centers.php:136
 msgid "Cooperating Centers Area"
 msgstr ""
 
-#: centers.php:146
+#: centers.php:147
 msgid "Cooperating Centers Header"
 msgstr ""
 
@@ -121,28 +121,32 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: template/home.php:338 template/results.php:89 template/results.php:204
+#: template/home.php:338 template/results.php:89 template/results.php:247
 msgid "VHL Network"
 msgstr ""
 
-#: template/home.php:358 template/results.php:90 template/results.php:224
+#: template/home.php:358 template/results.php:90 template/results.php:268
 msgid "Thematic Networks"
 msgstr ""
 
-#: template/results.php:91 template/results.php:244
+#: template/results.php:91 template/results.php:290
 msgid "Country"
 msgstr ""
 
-#: template/results.php:107
-msgid "Results"
-msgstr ""
-
-#: template/results.php:117
+#: template/results.php:109
 msgid "No results found"
 msgstr ""
 
-#: template/results.php:119
+#: template/results.php:111
 msgid "Institutions"
+msgstr ""
+
+#: template/results.php:132
+msgid "INACTIVE"
+msgstr ""
+
+#: template/results.php:134
+msgid "CLOSED"
 msgstr ""
 
 #: template-functions.php:71
