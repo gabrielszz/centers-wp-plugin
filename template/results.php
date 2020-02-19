@@ -90,6 +90,12 @@ $filter_title_translated['institution_type'] = __('VHL Network', 'cc');
 $filter_title_translated['institution_thematic'] = __('Thematic Networks', 'cc');
 $filter_title_translated['country'] = __('Country', 'cc');
 
+if ( function_exists( 'pll_the_languages' ) ) {
+    $available_languages = pll_languages_list();
+    $available_languages_name = pll_languages_list(array('fields' => 'name'));
+    $default_language = pll_default_language();
+}
+
 ?>
 
 <?php include('header.php') ?>
@@ -127,7 +133,13 @@ $filter_title_translated['country'] = __('Country', 'cc');
                     echo '<div class="box1">';
                     echo '<span class="badge badge-info">' . strval( intval($start) + $pos ) . '/' . $total . '</span>';
                     echo '<h3 class="box1Title">';
-                    echo $resource->title . '<br/>';
+                    echo $resource->title;
+                    if ($resource->status == '2'){
+                        echo ' <span class="badge badge-warning">' . __('INACTIVE', 'cc') . '</span>';
+                    }elseif($resource->status == '3'){
+                        echo ' <span class="badge badge-warning">' . __('CLOSED', 'cc') . '</span>';
+                    }
+                    echo '<br/>';
                     if ($resource->unit){
                         echo '<small>';
                         foreach ( $resource->unit as $unit ){
