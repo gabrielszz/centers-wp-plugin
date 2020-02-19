@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cooperating Centers 2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2020-02-19 19:03:08+00:00\n"
+"POT-Creation-Date: 2020-02-19 20:26:37+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -56,12 +56,20 @@ msgstr ""
 msgid "Save changes"
 msgstr ""
 
+#: template/footer.php:6
+msgid "Terms and conditions of use"
+msgstr ""
+
+#: template/footer.php:7
+msgid "Privacy Policy"
+msgstr ""
+
 #: template/header.php:6 template/header.php:60 template/home.php:95
-#: template/results.php:104
+#: template/results.php:110
 msgid "VHL Network Directory"
 msgstr ""
 
-#: template/header.php:75 template/header.php:81
+#: template/header.php:88 template/header.php:94
 msgid "Search"
 msgstr ""
 
@@ -117,35 +125,35 @@ msgstr ""
 msgid "MTCI"
 msgstr ""
 
-#: template/home.php:92 template/results.php:101
+#: template/home.php:92 template/results.php:107
 msgid "Home"
 msgstr ""
 
-#: template/home.php:338 template/results.php:89 template/results.php:247
+#: template/home.php:338 template/results.php:89 template/results.php:253
 msgid "VHL Network"
 msgstr ""
 
-#: template/home.php:358 template/results.php:90 template/results.php:268
+#: template/home.php:358 template/results.php:90 template/results.php:274
 msgid "Thematic Networks"
 msgstr ""
 
-#: template/results.php:91 template/results.php:290
+#: template/results.php:91 template/results.php:296
 msgid "Country"
 msgstr ""
 
-#: template/results.php:109
+#: template/results.php:115
 msgid "No results found"
 msgstr ""
 
-#: template/results.php:111
+#: template/results.php:117
 msgid "Institutions"
 msgstr ""
 
-#: template/results.php:132
+#: template/results.php:138
 msgid "INACTIVE"
 msgstr ""
 
-#: template/results.php:134
+#: template/results.php:140
 msgid "CLOSED"
 msgstr ""
 

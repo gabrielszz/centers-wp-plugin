@@ -53,7 +53,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-3" id="logo">
-				<a href="index.php"><img src="http://logos.bireme.org/img/pt/bvs_color.svg" alt="" class="img-fluid imgBlack" ></a>
+				<a href="index.php"><img src="http://logos.bireme.org/img/<?php echo $lang; ?>/bvs_color.svg" alt="" class="img-fluid imgBlack" ></a>
 			</div>
 			<div class="col-md-9">
 				<div id="titleMain" class="float-left">

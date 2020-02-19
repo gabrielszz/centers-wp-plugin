@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LeisRef 0.1\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2020-02-19 19:03:08+00:00\n"
-"PO-Revision-Date: 2020-02-19 17:08-0300\n"
+"POT-Creation-Date: 2020-02-19 20:26:37+00:00\n"
+"PO-Revision-Date: 2020-02-19 17:28-0300\n"
 "Last-Translator: Vinicius de Andrade <antoniov@paho.org>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -57,12 +57,20 @@ msgstr "Titulo"
 msgid "Save changes"
 msgstr "Guardar cambios"
 
+#: template/footer.php:6
+msgid "Terms and conditions of use"
+msgstr "Términos y condiciones de uso"
+
+#: template/footer.php:7
+msgid "Privacy Policy"
+msgstr "Política de Privacidad"
+
 #: template/header.php:6 template/header.php:60 template/home.php:95
-#: template/results.php:104
+#: template/results.php:110
 msgid "VHL Network Directory"
 msgstr "Directorio de la Red BVS"
 
-#: template/header.php:75 template/header.php:81
+#: template/header.php:88 template/header.php:94
 msgid "Search"
 msgstr "Buscar"
 
@@ -118,35 +126,35 @@ msgstr "Psicología"
 msgid "MTCI"
 msgstr "Medicina Tradicional y Complementaria"
 
-#: template/home.php:92 template/results.php:101
+#: template/home.php:92 template/results.php:107
 msgid "Home"
 msgstr "Inicio"
 
-#: template/home.php:338 template/results.php:89 template/results.php:247
+#: template/home.php:338 template/results.php:89 template/results.php:253
 msgid "VHL Network"
 msgstr "Red BVS"
 
-#: template/home.php:358 template/results.php:90 template/results.php:268
+#: template/home.php:358 template/results.php:90 template/results.php:274
 msgid "Thematic Networks"
 msgstr "Redes Tematicas"
 
-#: template/results.php:91 template/results.php:290
+#: template/results.php:91 template/results.php:296
 msgid "Country"
 msgstr "País"
 
-#: template/results.php:109
+#: template/results.php:115
 msgid "No results found"
 msgstr "No se han encontrado resultados"
 
-#: template/results.php:111
+#: template/results.php:117
 msgid "Institutions"
 msgstr "Instituciones"
 
-#: template/results.php:132
+#: template/results.php:138
 msgid "INACTIVE"
 msgstr "INACTIVA"
 
-#: template/results.php:134
+#: template/results.php:140
 msgid "CLOSED"
 msgstr "CERRADA"
 
