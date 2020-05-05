@@ -18,7 +18,7 @@ $country = $_GET['country'];
 $user = $_GET['user'];
 
 if ($search != ''){
-    $old_query = str_replace('=', ':', $search);
+    $old_query = str_replace('=', ':',  urldecode($search));
     $old_query = str_replace('pa', 'country_code', $old_query);
 }
 if ($country != ''){
