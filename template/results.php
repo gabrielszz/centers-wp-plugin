@@ -12,7 +12,28 @@ $cc_initial_filter = $cc_config['initial_filter'];
 $site_language = strtolower(get_bloginfo('language'));
 $lang = substr($site_language,0,2);
 
-$query = ( isset($_GET['search']) ? $_GET['search'] : $_GET['q'] );
+//compatibility with older version
+$search = $_GET['search'];
+$country = $_GET['country'];
+$user = $_GET['user'];
+
+if ($search != ''){
+    $old_query = str_replace('=', ':', $search);
+    $old_query = str_replace('pa', 'country_code', $old_query);
+}
+if ($country != ''){
+    $old_query .= ' country_code:' . $country;
+}
+if ($user != ''){
+    $old_query .= ' user:' . $country;
+}
+
+$query = ( isset($_GET['s']) ? $_GET['s'] : $_GET['q'] );
+
+if ($old_query != ''){
+    $query .= $old_query;
+}
+
 $query = stripslashes($query);
 $user_filter = stripslashes($_GET['filter']);
 $page = ( isset($_GET['page']) ? $_GET['page'] : 1 );
