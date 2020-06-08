@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Cooperating Centers 2.0\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2020-02-19 20:26:37+00:00\n"
+"POT-Creation-Date: 2020-06-08 15:12:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -44,15 +44,15 @@ msgstr ""
 msgid "Google Analytics code"
 msgstr ""
 
-#: settings.php:34
-msgid "Home URL"
-msgstr ""
-
-#: settings.php:42
+#: settings.php:34 settings.php:47
 msgid "Page title"
 msgstr ""
 
-#: settings.php:50
+#: settings.php:39 settings.php:52
+msgid "Home URL"
+msgstr ""
+
+#: settings.php:60
 msgid "Save changes"
 msgstr ""
 
@@ -65,7 +65,6 @@ msgid "Privacy Policy"
 msgstr ""
 
 #: template/header.php:6 template/header.php:60 template/home.php:95
-#: template/results.php:110
 msgid "VHL Network Directory"
 msgstr ""
 
@@ -73,87 +72,87 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: template/home.php:69 template/results.php:74
+#: template/home.php:69 template/results.php:95
 msgid "CoordinatingCentersRg"
 msgstr ""
 
-#: template/home.php:70 template/results.php:75
+#: template/home.php:70 template/results.php:96
 msgid "CoordinatingCentersNc"
 msgstr ""
 
-#: template/home.php:71 template/results.php:76
+#: template/home.php:71 template/results.php:97
 msgid "CooperatingCenters"
 msgstr ""
 
-#: template/home.php:72 template/results.php:77
+#: template/home.php:72 template/results.php:98
 msgid "CooperatingCentersLILACS"
 msgstr ""
 
-#: template/home.php:73 template/results.php:78
+#: template/home.php:73 template/results.php:99
 msgid "CooperatingCentersLEYES"
 msgstr ""
 
-#: template/home.php:74 template/results.php:79
+#: template/home.php:74 template/results.php:100
 msgid "ParticipantsUnits"
 msgstr ""
 
-#: template/home.php:75 template/results.php:80
+#: template/home.php:75 template/results.php:101
 msgid "VHLNetwork"
 msgstr ""
 
-#: template/home.php:77 template/results.php:82
+#: template/home.php:77 template/results.php:103
 msgid "MedCarib"
 msgstr ""
 
-#: template/home.php:78 template/results.php:83
+#: template/home.php:78 template/results.php:104
 msgid "Nursing"
 msgstr ""
 
-#: template/home.php:79 template/results.php:84
+#: template/home.php:79 template/results.php:105
 msgid "Border"
 msgstr ""
 
-#: template/home.php:80 template/results.php:85
+#: template/home.php:80 template/results.php:106
 msgid "Disastres"
 msgstr ""
 
-#: template/home.php:81 template/results.php:86
+#: template/home.php:81 template/results.php:107
 msgid "Psychology"
 msgstr ""
 
-#: template/home.php:82 template/results.php:87
+#: template/home.php:82 template/results.php:108
 msgid "MTCI"
 msgstr ""
 
-#: template/home.php:92 template/results.php:107
+#: template/home.php:92 template/results.php:128
 msgid "Home"
 msgstr ""
 
-#: template/home.php:338 template/results.php:89 template/results.php:253
+#: template/home.php:338 template/results.php:110 template/results.php:274
 msgid "VHL Network"
 msgstr ""
 
-#: template/home.php:358 template/results.php:90 template/results.php:274
+#: template/home.php:358 template/results.php:111 template/results.php:295
 msgid "Thematic Networks"
 msgstr ""
 
-#: template/results.php:91 template/results.php:296
+#: template/results.php:112 template/results.php:317
 msgid "Country"
 msgstr ""
 
-#: template/results.php:115
+#: template/results.php:136
 msgid "No results found"
 msgstr ""
 
-#: template/results.php:117
+#: template/results.php:138
 msgid "Institutions"
 msgstr ""
 
-#: template/results.php:138
+#: template/results.php:159
 msgid "INACTIVE"
 msgstr ""
 
-#: template/results.php:140
+#: template/results.php:161
 msgid "CLOSED"
 msgstr ""
 
