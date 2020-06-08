@@ -88,7 +88,7 @@ $feed_url = real_site_url($cc_plugin_slug) . 'cc-feed?q=' . urlencode($query) . 
 $pages = new Paginator($total, $start, $count);
 $pages->paginate($page_url_params);
 
-$home_url = isset($cc_config['home_url_' . $lang]) ? $cc_config['home_url_' . $lang] : ($cc_config['home_url'] != '') ? $cc_config['home_url'] : real_site_url();
+$home_url = isset($cc_config['home_url_' . $lang]) ? $cc_config['home_url_' . $lang] : $cc_config['home_url'];
 $plugin_title = isset($cc_config['plugin_title_' . $lang]) ? $cc_config['plugin_title_' . $lang] : $cc_config['plugin_title'];
 
 /* filters translations */
@@ -125,7 +125,7 @@ if ( function_exists( 'pll_the_languages' ) ) {
     <nav>
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="<?php echo $home_url ?>"><?php _e('Home','cc'); ?></a>
+                <a href="<?php echo ($home_url != '') ? $home_url : real_site_url() ?>"><?php _e('Home','cc'); ?></a>
             </li>
             <li class="breadcrumb-item">
                 <a href="<?php echo real_site_url($cc_plugin_slug); ?>"><?php echo $plugin_title ?></a>
