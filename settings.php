@@ -27,8 +27,13 @@ function cc_page_admin() {
                             $available_languages_name = pll_languages_list(array('fields' => 'name'));
                             $count = 0;
                             foreach ($available_languages as $lang) {
-                                $key_name = 'plugin_title_' . $lang;
+                                $plugin_title = 'plugin_title_' . $lang;
                                 $home_url = 'home_url_' . $lang;
+
+                                echo '<tr valign="top">';
+                                echo '   <th scope="row">' . __("Page title", "cc") . ' (' . $available_languages_name[$count] . '):</th>';
+                                echo '   <td><input type="text" name="cc_config[' . $plugin_title . ']" value="' . $config[$plugin_title] . '" class="regular-text code"></td>';
+                                echo '</tr>';
 
                                 echo '<tr valign="top">';
                                 echo '    <th scope="row"> ' . __("Home URL", "cc") . ' (' . $available_languages_name[$count] . '):</th>';
@@ -41,6 +46,11 @@ function cc_page_admin() {
                             echo '<tr valign="top">';
                             echo '   <th scope="row">' . __("Page title", "cc") . ':</th>';
                             echo '   <td><input type="text" name="cc_config[plugin_title]" value="' . $config["plugin_title"] . '" class="regular-text code"></td>';
+                            echo '</tr>';
+
+                            echo '<tr valign="top">';
+                            echo '    <th scope="row"> ' . __("Home URL", "cc") . ':</th>';
+                            echo '    <td><input type="text" name="cc_config[home_url]" value="' . $config['home_url'] . '" class="regular-text code"></td>';
                             echo '</tr>';
                         }
                         ?>
