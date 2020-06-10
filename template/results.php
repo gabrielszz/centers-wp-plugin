@@ -211,10 +211,12 @@ if ( function_exists( 'pll_the_languages' ) ) {
                     if ($resource->link){
                         echo '<tr>';
                         echo '	<td valign="top"><i class="fas fa-tv"></i></td>';
+                        echo '  <td>';
                         foreach ( $resource->link as $link ){
                             $link_norm = ( substr($link, 0, 4) != 'http' ? 'http://' . $link : $link );
-                        	echo '<td><a href="' . $link_norm . '" target="_blank">'  . $link . '</a></td>';
+                        	echo '<p><a href="' . $link_norm . '" target="_blank">'  . $link . '</a></p>';
                         }
+                        echo '</td>';
                         echo '</tr>';
                     }
                     echo '</table>';
