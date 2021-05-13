@@ -81,7 +81,7 @@
             <?php endif; ?>
 				<div class="clearfix"></div>
 				<div class="headerSearch" >
-					<form action="<?php echo real_site_url($cc_plugin_slug); ?>/results">
+					<form action="?results">
                         <input type="hidden" name="lang" id="lang" value="<?php echo $lang; ?>">
 						<div class="row">
 							<div class="col-md-10 inputBoxSearch">

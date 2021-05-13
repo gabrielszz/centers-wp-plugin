@@ -58,7 +58,7 @@ if ($response){
     $country_list = $response_json->diaServerResponse[0]->facet_counts->facet_fields->country;
 }
 
-$page_url_params = real_site_url($cc_plugin_slug) . '?q=' . urlencode($query)  . '&filter=' . urlencode($filter);
+$page_url_params = '?q=' . urlencode($query)  . '&filter=' . urlencode($filter);
 
 $pages = new Paginator($total, $start, $count);
 $pages->paginate($page_url_params);
