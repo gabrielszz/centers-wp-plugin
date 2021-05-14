@@ -233,7 +233,7 @@ if ( function_exists( 'pll_the_languages' ) ) {
         <div class="col-md-4 col-lg-3" id="filterRight">
             <div class="boxFilter">
                 <?php if ($applied_filter_list) :?>
-                    <form method="get" name="searchFilter" id="formFilters" action="<?php echo real_site_url($cc_plugin_slug); ?>results">
+                    <form method="get" name="searchFilter" id="formFilters" action="?results">
                         <input type="hidden" name="lang" id="lang" value="<?php echo $lang; ?>">
                         <input type="hidden" name="q" id="query" value="<?php echo $query; ?>" >
                         <input type="hidden" name="filter" id="filter" value="" >
