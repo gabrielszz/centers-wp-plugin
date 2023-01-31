@@ -12,10 +12,11 @@ $cc_initial_filter = $cc_config['initial_filter'];
 $site_language = strtolower(get_bloginfo('language'));
 $lang = substr($site_language,0,2);
 
-$query = ( isset($_GET['s']) ? $_GET['s'] : $_GET['q'] );
+$query = ( isset($_GET['s']) ? sanitize_text_field($_GET['s']) : sanitize_text_field($_GET['q']) );
 $query = stripslashes($query);
-$user_filter = stripslashes($_GET['filter']);
-$page = ( isset($_GET['page']) ? $_GET['page'] : 1 );
+$sanitize_user_filter = sanitize_text_field($_GET['filter']);
+$user_filter = stripslashes($sanitize_user_filter);
+$page = ( isset($_GET['page']) ? sanitize_text_field($_GET['page']) : 1 );
 $total = 0;
 $count = 10;
 $filter = '';

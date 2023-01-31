@@ -13,9 +13,9 @@ $site_language = strtolower(get_bloginfo('language'));
 $lang = substr($site_language,0,2);
 
 //compatibility with older version
-$search = $_GET['search'];
-$country = $_GET['country'];
-$user = $_GET['user'];
+$search = sanitize_text_field($_GET['search']);
+$country = sanitize_text_field($_GET['country']);
+$user = sanitize_text_field($_GET['user']);
 
 if ($search != ''){
     $old_query = str_replace('=', ':',  urldecode($search));
@@ -28,20 +28,21 @@ if ($user != ''){
     $old_query .= ' user:' . $country;
 }
 
-$query = ( isset($_GET['s']) ? $_GET['s'] : $_GET['q'] );
+$query = ( isset($_GET['s']) ? sanitize_text_field($_GET['s']) : sanitize_text_field($_GET['q']) );
 
 if ($old_query != ''){
     $query .= $old_query;
 }
 
 $query = stripslashes($query);
-$user_filter = stripslashes($_GET['filter']);
-$page = ( isset($_GET['page']) ? $_GET['page'] : 1 );
+$sanitize_user_filter = sanitize_text_field($_GET['filter']);
+$user_filter = stripslashes($sanitize_user_filter);
+$page = ( isset($_GET['page']) ? sanitize_text_field($_GET['page']) : 1 );
 $total = 0;
 $count = 10;
 $filter = '';
 
-$cc_initial_filter = $_GET['country_code'];
+$cc_initial_filter = sanitize_text_field($_GET['country_code']);
 
 if ($cc_initial_filter != ''){
     $cc_initial_filter = 'country_code:' . $cc_initial_filter;
