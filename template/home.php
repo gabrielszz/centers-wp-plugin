@@ -74,6 +74,7 @@ $type_translated['CooperatingCentersLILACS'] = __('CooperatingCentersLILACS','cc
 $type_translated['CooperatingCentersLEYES'] = __('CooperatingCentersLEYES','cc');
 $type_translated['ParticipantsUnits'] = __('ParticipantsUnits','cc');
 $type_translated['VHLNetwork'] = __('VHLNetwork','cc');
+$type_translated['EDITOR'] = __('Editor','cc');
 
 $thematic_translated['MedCarib'] = __('MedCarib','cc');
 $thematic_translated['Nursing'] = __('Nursing','cc');
