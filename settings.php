@@ -21,6 +21,10 @@ function cc_page_admin() {
                             <th scope="row"><?php _e('Google Analytics code', 'cc'); ?>:</th>
                             <td><input type="text" name="cc_config[google_analytics_code]" value="<?php echo $config['google_analytics_code'] ?>" class="regular-text code"></td>
                         </tr>
+                        <tr valign="top">
+                            <th scope="row"><?php _e('Initial filter query', 'cc'); ?>:</th>
+                            <td><input type="text" name="cc_config[initial_filter]" value='<?php echo $config['initial_filter'] ?>' class="regular-text code"></td>
+                        </tr>
                         <?php
                         if ( function_exists( 'pll_the_languages' ) ) {
                             $available_languages = pll_languages_list();

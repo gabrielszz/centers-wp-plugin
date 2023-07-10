@@ -42,17 +42,14 @@ $total = 0;
 $count = 10;
 $filter = '';
 
-$cc_initial_filter = sanitize_text_field($_GET['country_code']);
-
-if ($cc_initial_filter != ''){
-    $cc_initial_filter = 'country_code:' . $cc_initial_filter;
-    if ($user_filter != ''){
-        $filter = $cc_initial_filter . ' AND ' . $user_filter;
+if ($user_filter != ''){
+    if (substr($user_filter, 0, strlen($cc_initial_filter)) === $cc_initial_filter){
+        $filter = $user_filter;
     }else{
-        $filter = $cc_initial_filter;
+        $filter = $cc_initial_filter . ' AND ' . $user_filter;
     }
 }else{
-    $filter = $user_filter;
+    $filter = $cc_initial_filter;
 }
 $start = ($page * $count) - $count;
 
@@ -83,7 +80,7 @@ if ($response){
     $country_list = $response_json->diaServerResponse[0]->facet_counts->facet_fields->country;
 }
 
-$page_url_params = '?q=' . urlencode($query)  . '&filter=' . urlencode($filter);
+$page_url_params = '?q=' . urlencode($query)  . '&filter=' . urlencode($user_filter);
 
 $pages = new Paginator($total, $start, $count);
 $pages->paginate($page_url_params);
