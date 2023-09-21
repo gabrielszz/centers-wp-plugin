@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php _e('VHL Network Directory', 'cc'); ?></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo CC_PLUGIN_URL; ?>template/css/style.css">
-    <link rel="stylesheet" href="<?php echo CC_PLUGIN_URL; ?>template/css/accessibility.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900" rel="stylesheet">
 
     <?php if ($cc_config['google_analytics_code'] != ''): ?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -20,7 +15,7 @@
             gtag('config', '<?php echo $cc_config['google_analytics_code'] ?>');
         </script>
     <?php endif; ?>
-
+    <?php wp_head(); ?>
 </head>
 <body>
 

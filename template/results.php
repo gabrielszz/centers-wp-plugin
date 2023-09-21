@@ -5,6 +5,7 @@ Template Name: CC Home
 global $cc_service_url, $cc_plugin_slug, $cc_plugin_title;
 
 require_once(CC_PLUGIN_PATH . '/lib/Paginator.php');
+require_once(CC_PLUGIN_PATH . '/template/translations.php');
 
 $cc_config = get_option('cc_config');
 $cc_initial_filter = $cc_config['initial_filter'];
@@ -87,27 +88,6 @@ $pages->paginate($page_url_params);
 
 $home_url = isset($cc_config['home_url_' . $lang]) ? $cc_config['home_url_' . $lang] : $cc_config['home_url'];
 $plugin_title = isset($cc_config['plugin_title_' . $lang]) ? $cc_config['plugin_title_' . $lang] : $cc_config['plugin_title'];
-
-/* filters translations */
-$type_translated['CoordinatingCentersRg'] = __('CoordinatingCentersRg','cc');
-$type_translated['CoordinatingCentersNc'] = __('CoordinatingCentersNc','cc');
-$type_translated['CooperatingCenters'] = __('CooperatingCenters','cc');
-$type_translated['CooperatingCentersLILACS'] = __('CooperatingCentersLILACS','cc');
-$type_translated['CooperatingCentersLEYES'] = __('CooperatingCentersLEYES','cc');
-$type_translated['ParticipantsUnits'] = __('ParticipantsUnits','cc');
-$type_translated['VHLNetwork'] = __('VHLNetwork','cc');
-$type_translated['EDITOR'] = __('Editor','cc');
-
-$thematic_translated['MedCarib'] = __('MedCarib','cc');
-$thematic_translated['Nursing'] = __('Nursing','cc');
-$thematic_translated['Border'] = __('Border','cc');
-$thematic_translated['Disastres'] = __('Disastres','cc');
-$thematic_translated['Psychology'] = __('Psychology','cc');
-$thematic_translated['MTCI'] = __('MTCI','cc');
-
-$filter_title_translated['institution_type'] = __('VHL Network', 'cc');
-$filter_title_translated['institution_thematic'] = __('Thematic Networks', 'cc');
-$filter_title_translated['country'] = __('Country', 'cc');
 
 if ( function_exists( 'pll_the_languages' ) ) {
     $available_languages = pll_languages_list();
@@ -271,72 +251,131 @@ if ( function_exists( 'pll_the_languages' ) ) {
                     </form>
                 <?php endif; ?>
 
-                <h5 class="box1Title"><?php _e('VHL Network','cc'); ?></h5>
-                <ul>
-                    <?php foreach ( $type_list as $type ) { ?>
-                        <li class="cat-item">
-                            <?php
-                                $filter_link = '?';
-                                if ($query != ''){
-                                    $filter_link .= 'q=' . $query . '&';
-                                }
-                                $filter_link .= 'filter=institution_type:"' . $type[0] . '"';
-                                if ($user_filter != ''){
-                                    $filter_link .= ' AND ' . $user_filter ;
-                                }
-                            ?>
-                            <a href='<?php echo $filter_link; ?>'><?php echo $type_translated[$type[0]]; ?></a>
-                            <span class="cat-item-count">(<?php echo $type[1]; ?>)</span>
-                        </li>
-                    <?php } ?>
-                </ul>
-
-                <?php if ($thematic_list): ?>
-    			    <h5 class="box1Title"><?php _e('Thematic Networks','cc'); ?></h5>
-    			   	<ul>
-                        <?php foreach ($thematic_list as $thematic) { ?>
-                            <?php
-                                $filter_link = '?';
-                                if ($query != ''){
-                                    $filter_link .= 'q=' . $query . '&';
-                                }
-                                $filter_link .= 'filter=institution_thematic:"' . $thematic[0] . '"';
-                                if ($user_filter != ''){
-                                    $filter_link .= ' AND ' . $user_filter ;
-                                }
-                            ?>
+                <section>
+                    <h5 class="box1Title"><?php _e('VHL Network','cc'); ?></h5>
+                    <ul class="filter-list">
+                        <?php foreach ( $type_list as $type ) { ?>
                             <li class="cat-item">
-                                <a href='<?php echo $filter_link; ?>'><?php echo $thematic_translated[$thematic[0]] ?></a>
-                                <span class="cat-item-count">(<?php echo $thematic[1] ?>)</span>
-                            </li>
-                          <?php } ?>
-    				</ul>
-                <?php endif; ?>
-
-                <?php if ($country_list): ?>
-                    <h5 class="box1Title"><?php _e('Country','cc'); ?></h5>
-                    <ul>
-                        <?php foreach ( $country_list as $country ) { ?>
-                            <?php
-                                $filter_link = '?';
-                                if ($query != ''){
-                                    $filter_link .= 'q=' . $query . '&';
-                                }
-                                $filter_link .= 'filter=country:"' . $country[0] . '"';
-                                if ($user_filter != ''){
-                                    $filter_link .= ' AND ' . $user_filter ;
-                                }
-                            ?>
-                            <li class="cat-item">
-                                <a href='<?php echo $filter_link; ?>'><?php print_lang_value($country[0], $site_language)?></a>
-                                <span class="cat-item-count">(<?php echo $country[1] ?>)</span>
+                                <?php
+                                    $filter_link = '?';
+                                    if ($query != ''){
+                                        $filter_link .= 'q=' . $query . '&';
+                                    }
+                                    $filter_link .= 'filter=institution_type:"' . $type[0] . '"';
+                                    if ($user_filter != ''){
+                                        $filter_link .= ' AND ' . $user_filter ;
+                                    }
+                                ?>
+                                <a href='<?php echo $filter_link; ?>'><?php echo $type_translated[$type[0]]; ?></a>
+                                <span class="cat-item-count">(<?php echo $type[1]; ?>)</span>
                             </li>
                         <?php } ?>
                     </ul>
+                </section>
+
+                <?php if ($thematic_list): ?>
+                    <section>
+                        <h5 class="box1Title"><?php _e('Thematic Networks','cc'); ?></h5>
+                        <ul class="filter-list">
+                            <?php foreach ($thematic_list as $thematic) { ?>
+                                <?php
+                                    $filter_link = '?';
+                                    if ($query != ''){
+                                        $filter_link .= 'q=' . $query . '&';
+                                    }
+                                    $filter_link .= 'filter=institution_thematic:"' . $thematic[0] . '"';
+                                    if ($user_filter != ''){
+                                        $filter_link .= ' AND ' . $user_filter ;
+                                    }
+                                ?>
+                                <li class="cat-item">
+                                    <a href='<?php echo $filter_link; ?>'><?php echo $thematic_translated[$thematic[0]] ?></a>
+                                    <span class="cat-item-count">(<?php echo $thematic[1] ?>)</span>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </section>
+                <?php endif; ?>
+
+                <?php if ($country_list): ?>
+                    <section>
+                        <h5 class="box1Title"><?php _e('Country','cc'); ?></h5>
+                        <ul class="filter-list">
+                            <?php foreach ( $country_list as $country ) { ?>
+                                <?php
+                                    $filter_link = '?';
+                                    if ($query != ''){
+                                        $filter_link .= 'q=' . $query . '&';
+                                    }
+                                    $filter_link .= 'filter=country:"' . $country[0] . '"';
+                                    if ($user_filter != ''){
+                                        $filter_link .= ' AND ' . $user_filter ;
+                                    }
+                                ?>
+                                <li class="cat-item">
+                                    <a href='<?php echo $filter_link; ?>'><?php print_lang_value($country[0], $site_language)?></a>
+                                    <span class="cat-item-count">(<?php echo $country[1] ?>)</span>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                        <?php if ( count($country_list) == 20 ) : ?>
+                            <div class="show-more text-center">
+                                <a href="javascript:void(0)" class="btn-ajax" data-fb="30" data-cluster="country"><?php _e('show more','cc'); ?></a>
+                                <a href="javascript:void(0)" class="loading"><?php _e('loading','cc'); ?>...</a>
+                            </div>
+                        <?php endif; ?>
+                    </section>
                 <?php endif; ?>
             </div>
         </div>
     </div>
 </section>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        $(document).on( "click", ".btn-ajax", function(e) {
+            e.preventDefault();
+
+            var _this = $(this);
+            var fb = $(this).data('fb');
+            var cluster = $(this).data('cluster');
+
+            $(this).hide();
+            $(this).next('.loading').show();
+
+            $.ajax({
+                type: "POST",
+                url: cc_script_vars.ajaxurl,
+                data: {
+                    action: 'centers_show_more_clusters',
+                    lang: '<?php echo $lang_dir; ?>',
+                    site_lang: '<?php echo $site_language; ?>',
+                    query: '<?php echo $query; ?>',
+                    filter: '<?php echo $filter; ?>',
+                    uf: '<?php echo $user_filter; ?>',
+                    cluster: cluster,
+                    fb: fb
+                },
+                success: function(response){
+                    var html = $.parseHTML( response );
+                    var this_len = _this.parent().siblings('.filter-list').find(".cat-item").length;
+                    _this.parent().siblings('.filter-list').replaceWith( response );
+                    _this.data('fb', fb+10);
+                    _this.next('.loading').hide();
+
+                    var response_len = $(html).find(".cat-item").length;
+                    var mod = parseInt(response_len % 10);
+
+                    if ( mod || response_len == this_len ) {
+                        _this.remove();
+                    } else {
+                        _this.show();
+                    }
+                },
+                error: function(error){ console.log(error) }
+            });
+        });
+    });
+</script>
 
 <?php include('footer.php'); ?>

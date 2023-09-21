@@ -128,7 +128,6 @@
 	padding-left: 20px;
 }
 .boxFilter{
-	position: sticky;
 	top: 0;
 	font-size: 14px;
 	padding: 20px;
@@ -137,18 +136,17 @@
 	/*border-bottom: 3px solid #ddd;*/
 	/*border-top: 3px solid #ddd;*/
 }
-	.boxFilter>ul{
-		padding: 0!important;
-
-	}
-	.boxFilter>ul>li{
-		list-style: none;
-		margin-bottom: 20px;
-	}
-	.boxFilter ul li{
-		border-bottom: 1px solid #ddd;
-		padding: 0px;
-	}
+.boxFilter ul{
+	padding: 0!important;
+}
+.boxFilter ul li{
+	list-style: none;
+	margin-bottom: 20px;
+}
+.boxFilter ul li{
+	border-bottom: 1px solid #ddd;
+	padding: 0px;
+}
 .box1{
 	padding: 20px;
 	margin-bottom: 20px;
@@ -173,6 +171,22 @@
 	left: 0;
 	height: 7px;
 	width: 15%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.show-more {
+    clear: both;
+}
+
+.loading {
+    display: none;
+}
+
+.hide {
+    display: none;
 }
 @media (max-width: 768px){
 	#header{

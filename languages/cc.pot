@@ -1,38 +1,61 @@
-# Copyright (C) 2020 Cooperating Centers
-# This file is distributed under the same license as the Cooperating Centers package.
+# Copyright (C) 2023 BIREME/OPAS/OMS
+# This file is distributed under the same license as the Cooperating Centers plugin.
 msgid ""
 msgstr ""
 "Project-Id-Version: Cooperating Centers 2.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tag/centers\n"
-"POT-Creation-Date: 2020-06-08 15:12:16+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/centers\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2023-09-21T19:52:21+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.1\n"
 
-#: centers.php:89 settings.php:8
-msgid "Cooperating Centers Settings"
-msgstr ""
-
-#. #-#-#-#-#  centers.pot (Cooperating Centers 2.0)  #-#-#-#-#
-#. Plugin Name of the plugin/theme
-#: centers.php:89 centers.php:222
+#. Plugin Name of the plugin
+#: centers.php:91
+#: centers.php:226
 msgid "Cooperating Centers"
 msgstr ""
 
-#: centers.php:136
+#. Plugin URI of the plugin
+msgid "https://github.com/bireme/centers-wp-plugin/"
+msgstr ""
+
+#. Description of the plugin
+msgid "VHL Cooperating Centers Directory WordPress plugin"
+msgstr ""
+
+#. Author of the plugin
+msgid "BIREME/OPAS/OMS"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://reddes.bvsalud.org/"
+msgstr ""
+
+#: centers.php:91
+#: settings.php:8
+msgid "Cooperating Centers Settings"
+msgstr ""
+
+#: centers.php:140
 msgid "Cooperating Centers Area"
 msgstr ""
 
-#: centers.php:147
+#: centers.php:151
 msgid "Cooperating Centers Header"
 msgstr ""
 
-#: lib/Paginator.php:37 lib/Paginator.php:38 lib/Paginator.php:49
-#: lib/Paginator.php:55 lib/Paginator.php:64 lib/Paginator.php:65
-#: lib/Paginator.php:71 lib/Paginator.php:72
+#: lib/Paginator.php:34
+#: lib/Paginator.php:35
+#: lib/Paginator.php:46
+#: lib/Paginator.php:52
+#: lib/Paginator.php:61
+#: lib/Paginator.php:62
+#: lib/Paginator.php:68
+#: lib/Paginator.php:69
 msgid "go to page"
 msgstr ""
 
@@ -44,16 +67,26 @@ msgstr ""
 msgid "Google Analytics code"
 msgstr ""
 
-#: settings.php:34 settings.php:47
+#: settings.php:25
+msgid "Initial filter query"
+msgstr ""
+
+#: settings.php:38
+#: settings.php:51
 msgid "Page title"
 msgstr ""
 
-#: settings.php:39 settings.php:52
+#: settings.php:43
+#: settings.php:56
 msgid "Home URL"
 msgstr ""
 
-#: settings.php:60
+#: settings.php:64
 msgid "Save changes"
+msgstr ""
+
+#: template-functions.php:71
+msgid "of"
 msgstr ""
 
 #: template/footer.php:6
@@ -64,114 +97,129 @@ msgstr ""
 msgid "Privacy Policy"
 msgstr ""
 
-#: template/header.php:6 template/header.php:60 template/home.php:95
+#: template/header.php:6
+#: template/header.php:51
+#: template/home.php:97
 msgid "VHL Network Directory"
 msgstr ""
 
-#: template/header.php:88 template/header.php:94
+#: template/header.php:79
+#: template/header.php:85
 msgid "Search"
 msgstr ""
 
-#: template/home.php:69 template/results.php:95
+#: template/home.php:70
+#: template/translations.php:4
 msgid "CoordinatingCentersRg"
 msgstr ""
 
-#: template/home.php:70 template/results.php:96
+#: template/home.php:71
+#: template/translations.php:5
 msgid "CoordinatingCentersNc"
 msgstr ""
 
-#: template/home.php:71 template/results.php:97
+#: template/home.php:72
+#: template/translations.php:6
 msgid "CooperatingCenters"
 msgstr ""
 
-#: template/home.php:72 template/results.php:98
+#: template/home.php:73
+#: template/translations.php:7
 msgid "CooperatingCentersLILACS"
 msgstr ""
 
-#: template/home.php:73 template/results.php:99
+#: template/home.php:74
+#: template/translations.php:8
 msgid "CooperatingCentersLEYES"
 msgstr ""
 
-#: template/home.php:74 template/results.php:100
+#: template/home.php:75
+#: template/translations.php:9
 msgid "ParticipantsUnits"
 msgstr ""
 
-#: template/home.php:75 template/results.php:101
+#: template/home.php:76
+#: template/translations.php:10
 msgid "VHLNetwork"
 msgstr ""
 
-#: template/home.php:77 template/results.php:103
+#: template/home.php:77
+#: template/translations.php:11
+msgid "Editor"
+msgstr ""
+
+#: template/home.php:79
+#: template/translations.php:13
 msgid "MedCarib"
 msgstr ""
 
-#: template/home.php:78 template/results.php:104
+#: template/home.php:80
+#: template/translations.php:14
 msgid "Nursing"
 msgstr ""
 
-#: template/home.php:79 template/results.php:105
+#: template/home.php:81
+#: template/translations.php:15
 msgid "Border"
 msgstr ""
 
-#: template/home.php:80 template/results.php:106
+#: template/home.php:82
+#: template/translations.php:16
 msgid "Disastres"
 msgstr ""
 
-#: template/home.php:81 template/results.php:107
+#: template/home.php:83
+#: template/translations.php:17
 msgid "Psychology"
 msgstr ""
 
-#: template/home.php:82 template/results.php:108
+#: template/home.php:84
+#: template/translations.php:18
 msgid "MTCI"
 msgstr ""
 
-#: template/home.php:92 template/results.php:128
+#: template/home.php:94
+#: template/results.php:106
 msgid "Home"
 msgstr ""
 
-#: template/home.php:338 template/results.php:110 template/results.php:274
+#: template/home.php:340
+#: template/results.php:255
+#: template/translations.php:20
 msgid "VHL Network"
 msgstr ""
 
-#: template/home.php:358 template/results.php:111 template/results.php:295
+#: template/home.php:360
+#: template/results.php:278
+#: template/translations.php:21
 msgid "Thematic Networks"
 msgstr ""
 
-#: template/results.php:112 template/results.php:317
-msgid "Country"
-msgstr ""
-
-#: template/results.php:136
+#: template/results.php:114
 msgid "No results found"
 msgstr ""
 
-#: template/results.php:138
+#: template/results.php:116
 msgid "Institutions"
 msgstr ""
 
-#: template/results.php:159
+#: template/results.php:137
 msgid "INACTIVE"
 msgstr ""
 
-#: template/results.php:161
+#: template/results.php:139
 msgid "CLOSED"
 msgstr ""
 
-#: template-functions.php:71
-msgid "of"
+#: template/results.php:302
+#: template/translations.php:22
+msgid "Country"
 msgstr ""
 
-#. Plugin URI of the plugin/theme
-msgid "https://github.com/bireme/centers-wp-plugin/"
+#: template/results.php:323
+msgid "show more"
 msgstr ""
 
-#. Description of the plugin/theme
-msgid "VHL Cooperating Centers Directory WordPress plugin"
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "BIREME/OPAS/OMS"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://reddes.bvsalud.org/"
+#: template/results.php:324
+msgid "loading"
 msgstr ""
