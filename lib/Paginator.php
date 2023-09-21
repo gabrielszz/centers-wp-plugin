@@ -5,14 +5,15 @@ class Paginator{
     var $start;
     var $output;
     var $pag = array();
+    var $default_count = 10;
     var $current_page;
 
-    function Paginator($total, $start, $count=10)
+    function __construct($total, $start)
     {
         $this->total = $total;
         $this->start = $start;
-        $this->count = $count;
-        $this->current_page = ( !empty($_GET['page']) ? $_GET['page'] : 1);
+        $this->count = ( !empty($_GET['count'] ) ? $_GET['count'] : $this->default_count );
+        $this->current_page = ( !empty($_GET['pg'] ) ? $_GET['pg'] : 1);
     }
 
     function paginate($page_url_params){
