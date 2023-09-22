@@ -4,17 +4,17 @@ ini_set('display_errors', '0');
 
 $lang = $_POST['lang'];
 $site_lang = $_POST['site_lang'];
-$query = $_POST['query'];
-$filter = $_POST['filter'];
-$user_filter = $_POST['uf'];
+$query = stripslashes($_POST['query']);
+$filter = stripslashes($_POST['filter']);
+$user_filter = stripslashes($_POST['uf']);
 $fb = $_POST['fb'];
 $cluster = $_POST['cluster'];
 $cluster_fb = ( $_POST['cluster'] ) ? $_POST['cluster'].':'.$fb : '';
 $count = 1;
 
-$cc_service_request = $cc_service_url . 'api/institution/search/?q=' . urlencode($query) . '&fq=' . urlencode($filter) . '&fb=' . $cluster_fb . '&lang=' . $lang . '&count=' . $count;
+$cc_service_request = $cc_service_url . 'api/institution/search/?q=' . urlencode($query) . '&fq=' . urlencode($user_filter) . '&fb=' . $cluster_fb . '&lang=' . $lang . '&count=' . $count;
 
-//echo "<pre>"; print_r($cc_service_request); echo "</pre>"; die();
+//echo "<pre>"; echo " | "; echo($cc_service_request); echo "</pre>"; die();
 
 $response = @file_get_contents($cc_service_request);
 if ($response){

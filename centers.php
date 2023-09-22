@@ -248,6 +248,8 @@ if(!class_exists('CC_Plugin')) {
             wp_enqueue_script('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', array('jquery'), '4.0.0', true);
             wp_enqueue_script('cookie',  CC_PLUGIN_URL . 'template/js/cookie.js', array('jquery'), '1.0.0', true);
             wp_enqueue_script('accessibility', CC_PLUGIN_URL . 'template/js/accessibility.js', array('jquery'), '1.0.0', true);
+            wp_enqueue_script('functions', CC_PLUGIN_URL . 'template/js/functions.js', array('jquery'), '1.0.0', true);
+
 
             wp_enqueue_script('jquery');
 
