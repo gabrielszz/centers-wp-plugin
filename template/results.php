@@ -234,21 +234,21 @@ if ( function_exists( 'pll_the_languages' ) ) {
                         <input type="hidden" name="q" id="query" value="<?php echo $query; ?>" >
                         <input type="hidden" name="filter" id="filter" value="" >
 
-                        <?php foreach ( $applied_filter_list as $filter => $filter_values ) :?>
-                            <?php if ($filter != 'country_code'): ?>
-                                <h5><?php echo $filter_title_translated[$filter]; ?></h5>
+                        <?php foreach ( $applied_filter_list as $ap_filter => $ap_filter_values ) :?>
+                            <?php if ($ap_filter != 'country_code'): ?>
+                                <h5><?php echo $filter_title_translated[$ap_filter]; ?></h5>
                                 <ul>
-                                <?php foreach ( $filter_values as $value ) :?>
+                                <?php foreach ( $ap_filter_values as $value ) :?>
                                     <input type="hidden" name="apply_filter" class="apply_filter"
-                                            id="<?php echo md5($value) ?>" value='<?php echo $filter . ':"' . $value . '"'; ?>' >
+                                            id="<?php echo md5($value) ?>" value='<?php echo $ap_filter . ':"' . $value . '"'; ?>' >
                                     <li>
                                         <span class="filter-item">
                                             <?php
-                                                if ($filter == 'country'){
+                                                if ($ap_filter == 'country'){
                                                     echo print_lang_value($value, $site_language);
-                                                }elseif ($filter == 'institution_type'){
+                                                }elseif ($ap_filter == 'institution_type'){
                                                     echo $type_translated[$value];
-                                                }elseif ($filter == 'institution_thematic'){
+                                                }elseif ($ap_filter == 'institution_thematic'){
                                                     echo $thematic_translated[$value];
                                                 }else{
                                                     echo $value;

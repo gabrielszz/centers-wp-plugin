@@ -12,19 +12,9 @@ $cluster = $_POST['cluster'];
 $cluster_fb = ( $_POST['cluster'] ) ? $_POST['cluster'].':'.$fb : '';
 $count = 1;
 
-$cc_service_request = $cc_service_url . 'api/institution/search/?q=' . urlencode($query) . '&fq=' . urlencode($user_filter) . '&fb=' . $cluster_fb . '&lang=' . $lang . '&count=' . $count;
+$cc_service_request = $cc_service_url . 'api/institution/search/?q=' . urlencode($query) . '&fq=' . urlencode($filter) . '&fb=' . $cluster_fb . '&lang=' . $lang . '&count=' . $count;
 
 //echo "<pre>"; echo " | "; echo($cc_service_request); echo "</pre>"; die();
-
-$patterns = array(
-    'A' => '(á|à|â|ä|Á|À|Â|Ä)',
-    'E' => '(é|è|ê|ë|É|È|Ê|Ë)',
-    'I' => '(í|ì|î|ï|Í|Ì|Î|Ï)',
-    'O' => '(ó|ò|ô|ö|Ó|Ò|Ô|Ö)',
-    'U' => '(ú|ù|û|ü|Ú|Ù|Û|Ü)',
-    'C' => '(ç|Ç)',
-    'N' => '(ñ|Ñ)'
-);
 
 $response = @file_get_contents($cc_service_request);
 if ($response){
@@ -36,7 +26,6 @@ if ($response){
     $facet_list = (array) $response_json->diaServerResponse[0]->facet_counts->facet_fields;
 
     $country_list = (array) $response_json->diaServerResponse[0]->facet_counts->facet_fields->country;
-
 }
 ?>
 
