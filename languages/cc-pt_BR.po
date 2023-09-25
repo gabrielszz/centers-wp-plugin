@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: LeisRef 0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/centers\n"
-"POT-Creation-Date: 2023-09-21T19:52:21+00:00\n"
-"PO-Revision-Date: 2023-09-21 16:53-0300\n"
+"POT-Creation-Date: 2023-09-25T14:36:43+00:00\n"
+"PO-Revision-Date: 2023-09-25 12:09-0300\n"
 "Last-Translator: Vinicius de Andrade <antoniov@paho.org>\n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -97,101 +97,133 @@ msgstr "Diretório da Rede BVS"
 msgid "Search"
 msgstr "Buscar"
 
-#: template/home.php:70 template/translations.php:4
+#: template/home.php:70 template/translations.php:14
 msgid "CoordinatingCentersRg"
 msgstr "Centros Coordenadores Regionais"
 
-#: template/home.php:71 template/translations.php:5
+#: template/home.php:71 template/translations.php:15
 msgid "CoordinatingCentersNc"
 msgstr "Centros Coordenadores Nacionais"
 
-#: template/home.php:72 template/translations.php:6
+#: template/home.php:72 template/translations.php:17
 msgid "CooperatingCenters"
 msgstr "Centros Cooperantes"
 
-#: template/home.php:73 template/translations.php:7
+#: template/home.php:73 template/translations.php:18
 msgid "CooperatingCentersLILACS"
 msgstr "Centros Cooperantes LILACS"
 
-#: template/home.php:74 template/translations.php:8
+#: template/home.php:74 template/translations.php:19
 msgid "CooperatingCentersLEYES"
 msgstr "Centros Cooperantes LEYES"
 
-#: template/home.php:75 template/translations.php:9
+#: template/home.php:75 template/translations.php:20
 msgid "ParticipantsUnits"
 msgstr "Unidades Participantes"
 
-#: template/home.php:76 template/translations.php:10
+#: template/home.php:76 template/translations.php:21
 msgid "VHLNetwork"
 msgstr "Rede BVS"
 
-#: template/home.php:77 template/translations.php:11
+#: template/home.php:77 template/translations.php:22
 msgid "Editor"
 msgstr "Editor"
 
-#: template/home.php:79 template/translations.php:13
+#: template/home.php:79 template/translations.php:24
 msgid "MedCarib"
 msgstr "MedCarib"
 
-#: template/home.php:80 template/translations.php:14
+#: template/home.php:80 template/translations.php:25
 msgid "Nursing"
 msgstr "Enfermagem"
 
-#: template/home.php:81 template/translations.php:15
+#: template/home.php:81 template/translations.php:26
 msgid "Border"
 msgstr "Saúde Frontera México-Estados Unidos"
 
-#: template/home.php:82 template/translations.php:16
+#: template/home.php:82 template/translations.php:27
 msgid "Disastres"
 msgstr "Desastres"
 
-#: template/home.php:83 template/translations.php:17
+#: template/home.php:83 template/translations.php:28
 msgid "Psychology"
 msgstr "Psicologia"
 
-#: template/home.php:84 template/translations.php:18
+#: template/home.php:84 template/translations.php:29
 msgid "MTCI"
 msgstr "Medicina Tradicional e Complementar"
 
-#: template/home.php:94 template/results.php:106
+#: template/home.php:94 template/results.php:123
 msgid "Home"
 msgstr "Início"
 
-#: template/home.php:340 template/results.php:255 template/translations.php:20
+#: template/home.php:340 template/results.php:272 template/translations.php:38
 msgid "VHL Network"
 msgstr "Rede BVS"
 
-#: template/home.php:360 template/results.php:278 template/translations.php:21
+#: template/home.php:360 template/results.php:295 template/translations.php:39
 msgid "Thematic Networks"
 msgstr "Redes Temáticas"
 
-#: template/results.php:114
+#: template/results.php:131
 msgid "No results found"
 msgstr "Nenhum resultado encontrado"
 
-#: template/results.php:116
+#: template/results.php:133
 msgid "Institutions"
 msgstr "Instituições"
 
-#: template/results.php:137
+#: template/results.php:154
 msgid "INACTIVE"
 msgstr "INATIVA"
 
-#: template/results.php:139
+#: template/results.php:156
 msgid "CLOSED"
 msgstr "FECHADA"
 
-#: template/results.php:302 template/translations.php:22
+#: template/results.php:319 template/translations.php:40
 msgid "Country"
 msgstr "País"
 
-#: template/results.php:323
+#: template/results.php:340
 msgid "show more"
 msgstr "mostrar mais"
 
-#: template/results.php:324
+#: template/results.php:341
 msgid "loading"
 msgstr "carregando"
+
+#: template/translations.php:16
+msgid "CoordinatingCentersTh"
+msgstr "Centros Coordenadores Temáticos"
+
+#: template/translations.php:30
+msgid "BIBLIOSUS"
+msgstr "Bibliotecas do SUS"
+
+#: template/translations.php:31
+msgid "BVSVET"
+msgstr "Veterinária"
+
+#: template/translations.php:32
+msgid "EPORT"
+msgstr "ePORTUGUÊSe"
+
+#: template/translations.php:33
+msgid "EVIPNET"
+msgstr "Políticas Informadas por Evidências"
+
+#: template/translations.php:34
+msgid "ODONTOLOGIA"
+msgstr "Odontologia"
+
+#: template/translations.php:35
+msgid "SES-SP"
+msgstr "Secretaria de Saúde do Estado de São Paulo"
+
+#: template/translations.php:36
+msgid "SMS-SP"
+msgstr "Secretaria Municipal da Saúde de São Paulo"
 
 #~ msgid "Results"
 #~ msgstr "Resultados"

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-09-21T19:52:21+00:00\n"
+"POT-Creation-Date: 2023-09-25T14:36:43+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.1\n"
 
@@ -109,117 +109,149 @@ msgid "Search"
 msgstr ""
 
 #: template/home.php:70
-#: template/translations.php:4
+#: template/translations.php:14
 msgid "CoordinatingCentersRg"
 msgstr ""
 
 #: template/home.php:71
-#: template/translations.php:5
+#: template/translations.php:15
 msgid "CoordinatingCentersNc"
 msgstr ""
 
 #: template/home.php:72
-#: template/translations.php:6
+#: template/translations.php:17
 msgid "CooperatingCenters"
 msgstr ""
 
 #: template/home.php:73
-#: template/translations.php:7
+#: template/translations.php:18
 msgid "CooperatingCentersLILACS"
 msgstr ""
 
 #: template/home.php:74
-#: template/translations.php:8
+#: template/translations.php:19
 msgid "CooperatingCentersLEYES"
 msgstr ""
 
 #: template/home.php:75
-#: template/translations.php:9
+#: template/translations.php:20
 msgid "ParticipantsUnits"
 msgstr ""
 
 #: template/home.php:76
-#: template/translations.php:10
+#: template/translations.php:21
 msgid "VHLNetwork"
 msgstr ""
 
 #: template/home.php:77
-#: template/translations.php:11
+#: template/translations.php:22
 msgid "Editor"
 msgstr ""
 
 #: template/home.php:79
-#: template/translations.php:13
+#: template/translations.php:24
 msgid "MedCarib"
 msgstr ""
 
 #: template/home.php:80
-#: template/translations.php:14
+#: template/translations.php:25
 msgid "Nursing"
 msgstr ""
 
 #: template/home.php:81
-#: template/translations.php:15
+#: template/translations.php:26
 msgid "Border"
 msgstr ""
 
 #: template/home.php:82
-#: template/translations.php:16
+#: template/translations.php:27
 msgid "Disastres"
 msgstr ""
 
 #: template/home.php:83
-#: template/translations.php:17
+#: template/translations.php:28
 msgid "Psychology"
 msgstr ""
 
 #: template/home.php:84
-#: template/translations.php:18
+#: template/translations.php:29
 msgid "MTCI"
 msgstr ""
 
 #: template/home.php:94
-#: template/results.php:106
+#: template/results.php:123
 msgid "Home"
 msgstr ""
 
 #: template/home.php:340
-#: template/results.php:255
-#: template/translations.php:20
+#: template/results.php:272
+#: template/translations.php:38
 msgid "VHL Network"
 msgstr ""
 
 #: template/home.php:360
-#: template/results.php:278
-#: template/translations.php:21
+#: template/results.php:295
+#: template/translations.php:39
 msgid "Thematic Networks"
 msgstr ""
 
-#: template/results.php:114
+#: template/results.php:131
 msgid "No results found"
 msgstr ""
 
-#: template/results.php:116
+#: template/results.php:133
 msgid "Institutions"
 msgstr ""
 
-#: template/results.php:137
+#: template/results.php:154
 msgid "INACTIVE"
 msgstr ""
 
-#: template/results.php:139
+#: template/results.php:156
 msgid "CLOSED"
 msgstr ""
 
-#: template/results.php:302
-#: template/translations.php:22
+#: template/results.php:319
+#: template/translations.php:40
 msgid "Country"
 msgstr ""
 
-#: template/results.php:323
+#: template/results.php:340
 msgid "show more"
 msgstr ""
 
-#: template/results.php:324
+#: template/results.php:341
 msgid "loading"
+msgstr ""
+
+#: template/translations.php:16
+msgid "CoordinatingCentersTh"
+msgstr ""
+
+#: template/translations.php:30
+msgid "BIBLIOSUS"
+msgstr ""
+
+#: template/translations.php:31
+msgid "BVSVET"
+msgstr ""
+
+#: template/translations.php:32
+msgid "EPORT"
+msgstr ""
+
+#: template/translations.php:33
+msgid "EVIPNET"
+msgstr ""
+
+#: template/translations.php:34
+msgid "ODONTOLOGIA"
+msgstr ""
+
+#: template/translations.php:35
+msgid "SES-SP"
+msgstr ""
+
+#: template/translations.php:36
+msgid "SMS-SP"
 msgstr ""

@@ -76,9 +76,26 @@ if ($response){
     $start = $response_json->diaServerResponse[0]->response->start;
     $center_list = $response_json->diaServerResponse[0]->response->docs;
 
-    $type_list = $response_json->diaServerResponse[0]->facet_counts->facet_fields->institution_type;
-    $thematic_list = $response_json->diaServerResponse[0]->facet_counts->facet_fields->institution_thematic;
-    $country_list = $response_json->diaServerResponse[0]->facet_counts->facet_fields->country;
+    $type_list = (array) $response_json->diaServerResponse[0]->facet_counts->facet_fields->institution_type;
+    $thematic_list = (array) $response_json->diaServerResponse[0]->facet_counts->facet_fields->institution_thematic;
+    $country_list = (array) $response_json->diaServerResponse[0]->facet_counts->facet_fields->country;
+
+    usort($type_list, function($a, $b) use ($patterns, $type_translated) {
+        $a[0] = strtolower($type_translated[$a[0]]);
+        $a[0] = preg_replace(array_values($patterns), array_keys($patterns), $a[0]);
+        $b[0] = $type_translated[$b[0]];
+        $b[0] = preg_replace(array_values($patterns), array_keys($patterns), $b[0]);
+        return $a[0] <=> $b[0];
+    });
+
+    usort($thematic_list, function($a, $b) use ($patterns, $thematic_translated) {
+        $a[0] = strtolower($thematic_translated[$a[0]]);
+        $a[0] = preg_replace(array_values($patterns), array_keys($patterns), $a[0]);
+        $b[0] = strtolower($thematic_translated[$b[0]]);
+        $b[0] = preg_replace(array_values($patterns), array_keys($patterns), $b[0]);
+        return $a[0] <=> $b[0];
+    });
+
 }
 
 $page_url_params = '?q=' . urlencode($query)  . '&filter=' . urlencode($user_filter);

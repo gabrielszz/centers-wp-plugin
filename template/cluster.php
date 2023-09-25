@@ -16,6 +16,16 @@ $cc_service_request = $cc_service_url . 'api/institution/search/?q=' . urlencode
 
 //echo "<pre>"; echo " | "; echo($cc_service_request); echo "</pre>"; die();
 
+$patterns = array(
+    'A' => '(á|à|â|ä|Á|À|Â|Ä)',
+    'E' => '(é|è|ê|ë|É|È|Ê|Ë)',
+    'I' => '(í|ì|î|ï|Í|Ì|Î|Ï)',
+    'O' => '(ó|ò|ô|ö|Ó|Ò|Ô|Ö)',
+    'U' => '(ú|ù|û|ü|Ú|Ù|Û|Ü)',
+    'C' => '(ç|Ç)',
+    'N' => '(ñ|Ñ)'
+);
+
 $response = @file_get_contents($cc_service_request);
 if ($response){
     $response_json = json_decode($response);
@@ -25,35 +35,33 @@ if ($response){
 
     $facet_list = (array) $response_json->diaServerResponse[0]->facet_counts->facet_fields;
 
-    $type_list = $response_json->diaServerResponse[0]->facet_counts->facet_fields->institution_type;
-    $thematic_list = $response_json->diaServerResponse[0]->facet_counts->facet_fields->institution_thematic;
-    $country_list = $response_json->diaServerResponse[0]->facet_counts->facet_fields->country;
+    $country_list = (array) $response_json->diaServerResponse[0]->facet_counts->facet_fields->country;
+
 }
 ?>
 
-<?php if ( $facet_list[$cluster] ) : ?>
-    <ul class="filter-list">
-        <?php foreach ( $facet_list[$cluster] as $filter_item ) { ?>
-            <?php
-                $filter_value = $filter_item[0];
-                $filter_count = $filter_item[1];
-            ?>
-            <?php if ( filter_var($filter_value, FILTER_VALIDATE_INT) === false ) : ?>
-                <li class="cat-item">
-                    <?php
-                        $filter_link = '?';
-                        if ($query != ''){
-                            $filter_link .= 'q=' . $query . '&';
-                        }
-                        $filter_link .= 'filter=' . $cluster . ':"' . $filter_value . '"';
-                        if ($user_filter != ''){
-                            $filter_link .= ' AND ' . $user_filter ;
-                        }
-                    ?>
-                    <a href='<?php echo $filter_link; ?>'><?php print_lang_value($filter_value, $site_lang)?></a>
-                    <span class="cat-item-count">(<?php echo $filter_count; ?>)</span>
-                </li>
-            <?php endif; ?>
-        <?php } ?>
-    </ul>
-<?php endif; ?>
+
+<ul class="filter-list">
+    <?php foreach ( $country_list as $filter_item ) { ?>
+        <?php
+            $filter_value = $filter_item[0];
+            $filter_count = $filter_item[1];
+        ?>
+        <?php if ( filter_var($filter_value, FILTER_VALIDATE_INT) === false ) : ?>
+            <li class="cat-item">
+                <?php
+                    $filter_link = '?';
+                    if ($query != ''){
+                        $filter_link .= 'q=' . $query . '&';
+                    }
+                    $filter_link .= 'filter=' . $cluster . ':"' . $filter_value . '"';
+                    if ($user_filter != ''){
+                        $filter_link .= ' AND ' . $user_filter ;
+                    }
+                ?>
+                <a href='<?php echo $filter_link; ?>'><?php print_lang_value($filter_value, $site_lang)?></a>
+                <span class="cat-item-count">(<?php echo $filter_count; ?>)</span>
+            </li>
+        <?php endif; ?>
+    <?php } ?>
+</ul>
