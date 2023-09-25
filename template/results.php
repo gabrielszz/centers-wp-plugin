@@ -83,7 +83,7 @@ if ($response){
     usort($type_list, function($a, $b) use ($patterns, $type_translated) {
         $a[0] = strtolower($type_translated[$a[0]]);
         $a[0] = preg_replace(array_values($patterns), array_keys($patterns), $a[0]);
-        $b[0] = $type_translated[$b[0]];
+        $b[0] = strtolower($type_translated[$b[0]]);
         $b[0] = preg_replace(array_values($patterns), array_keys($patterns), $b[0]);
         return $a[0] <=> $b[0];
     });
