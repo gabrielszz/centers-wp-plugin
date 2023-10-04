@@ -13,7 +13,7 @@ class Paginator{
         $this->total = $total;
         $this->start = $start;
         $this->count = ( !empty($_GET['count'] ) ? $_GET['count'] : $this->default_count );
-        $this->current_page = ( !empty($_GET['pg'] ) ? $_GET['pg'] : 1);
+        $this->current_page = ( !empty($_GET['page'] ) ? $_GET['page'] : 1);
     }
 
     function paginate($page_url_params){
