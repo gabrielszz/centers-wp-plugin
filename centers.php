@@ -240,7 +240,7 @@ if(!class_exists('CC_Plugin')) {
 
         function page_template_styles_scripts(){
             wp_enqueue_style('bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');
-            wp_enqueue_style('style', CC_PLUGIN_URL . 'template/css/style.css');
+            wp_enqueue_style('style-centers', CC_PLUGIN_URL . 'template/css/style.css');
             wp_enqueue_style('accessibility', CC_PLUGIN_URL . 'template/css/accessibility.css');
             wp_enqueue_style('fontawesome', '//use.fontawesome.com/releases/v5.8.1/css/all.css');
             wp_enqueue_style('fontgoogle', '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900');
