@@ -147,13 +147,13 @@ if ( function_exists( 'pll_the_languages' ) ) {
                     $pos++;
                     echo '<article class="col-lg-' . ($total == '1'? '12' : '6') . '">';
                     echo '<div class="box1">';
-                    echo '<span class="badge badge-info">' . strval( intval($start) + $pos ) . '/' . $total . '</span>';
+                    echo '<span class="badge text-bg-info">' . strval( intval($start) + $pos ) . '/' . $total . '</span>';
                     echo '<h3 class="box1Title">';
                     echo $resource->title;
                     if ($resource->status == '2'){
-                        echo ' <span class="badge badge-warning">' . __('INACTIVE', 'cc') . '</span>';
+                        echo ' <span class="badge text-bg-warning">' . __('INACTIVE', 'cc') . '</span>';
                     }elseif($resource->status == '3'){
-                        echo ' <span class="badge badge-warning">' . __('CLOSED', 'cc') . '</span>';
+                        echo ' <span class="badge text-bg-warning">' . __('CLOSED', 'cc') . '</span>';
                     }
                     echo '<br/>';
                     if ($resource->unit){
