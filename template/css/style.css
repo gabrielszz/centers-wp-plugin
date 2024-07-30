@@ -122,6 +122,13 @@ body{
 	margin-top: 20px;
 	border-top: 2px solid #ddd;
 	background: #eee;
+	color:#398ab4;
+}
+#footer a{
+	color:#398ab4;
+}
+#footer a:hover{
+	color:#999;
 }
 #footer img{
 	max-width: 500px;
